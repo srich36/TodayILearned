@@ -37,6 +37,21 @@ class Employee(models.model):
     )
 ```
 
+
+### select_related
+
+Select related is a way to pre-populate foreign key relationship data in one query instead of grabbing the initial model, then getting the foreign key representation of it. This accomplishes the same thing as normal indexing but in one less database hit. While that does not make a ton of sense, an example will clear it up
+
+```python
+post = Post.objects.get(id=2) # Hits database to get post
+user = post.user # Hits database again to get user
+```
+
+```python
+post = Post.objects.select_related('users').get(id=2) #
+user = post.user # Doesn't hit the database because the post model is already populated with user because of select_related
+```
+
 From a department instance you can get all employees with a foreign key reference to that department with `<department_model>.employees.all()`. Without setting the related field you would have to do `<department_model>.employee_set.all()`.
 
 ### Authentication Backends
