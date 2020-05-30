@@ -1,0 +1,44 @@
+{
+  "pluginEnabledStatus": {
+    "File explorer": true,
+    "Search": true,
+    "Quick switcher": true,
+    "Graph view": true,
+    "Backlinks": true,
+    "Command palette": true,
+    "Markdown format importer": true,
+    "Word count": true
+  },
+  "isSidebarCollapsed": false,
+  "isRightSidedockCollapsed": false,
+  "lastOpenSidebarTab": "File explorer",
+  "lastOpenRightSidedockTab": "Backlinks",
+  "theme": "obsidian",
+  "workspaceLayout": {
+    "id": "a95363af661fe4b4",
+    "type": "split",
+    "dimension": null,
+    "direction": "vertical",
+    "children": [
+      {
+        "id": "5c9d6f1dbe4a72da",
+        "type": "leaf",
+        "dimension": null,
+        "active": true,
+        "master": "",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ]
+  },
+  "lastOpenFiles": [
+    "TCP-IP/IP_Addresses.md",
+    "TCP-IP/IP_Subnets.md",
+    "TCP-IP/Unix_Specific.md",
+    "TCP-IP/TCP-IP.md",
+    "TCP-IP/Network_Layers.md"
+  ],
+  "alwaysUpdateLinks": true
+}

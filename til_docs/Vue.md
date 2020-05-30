@@ -21,3 +21,5 @@ Relatively simple component framework for `google material design`. Implements m
 You can access `Vuetify` components specifically with `wrapper.find({name: <ComponentName>})` but this seems to not work sometimes. It may be a much better practice to just put a `.v-<component>-test` class on the `Vuetify component` for matching
 
 After trying it out this is a **much** better approach
+
+Test for CI/CD

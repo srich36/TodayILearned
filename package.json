@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "docs": "markdown-folder-to-html til_docs",
+    "serve": "serve _til_docs"
+  },
+  "devDependencies": {
+    "markdown-folder-to-html": "^2.4.0",
+    "serve": "^11.3.1"
+  }
+}
