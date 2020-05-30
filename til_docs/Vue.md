@@ -22,4 +22,4 @@ You can access `Vuetify` components specifically with `wrapper.find({name: <Comp
 
 After trying it out this is a **much** better approach
 
-Test for CI/CD
+Test for CI/CD!
