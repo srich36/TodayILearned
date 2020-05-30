@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "docs": "markdown-folder-to-html til_docs",
+    "docs": "markdown-folder-to-html til_docs && cp WebsiteError.html _til_docs",
     "serve": "serve _til_docs"
   },
   "devDependencies": {
