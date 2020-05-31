@@ -11,3 +11,4 @@ This repository serves as a random collection of TIL's over a random period of d
 - [Python](Python.md)
 - [Vue](Vue.md)
 - [TCP](TCP-IP/TCP-IP.md)
+- [Domain Name Configuration](DNS_Config.md)
