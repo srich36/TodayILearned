@@ -540,38 +540,38 @@
       </a>
       <nav id="menu">
         <ul>
-<li><a class="" href="../README.html">README</a></li>
-<li><a class="" href="../index.html">index</a></li>
-<li><a class="" href="../Authentication.html">Authentication</a></li>
-<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
-<li><a class="" href="../Django.html">Django</a></li>
+<li><a class="" href="README.html">README</a></li>
+<li><a class="" href="index.html">index</a></li>
+<li><a class="" href="Authentication.html">Authentication</a></li>
+<li><a class="active" href="DNS_Config.html">DNS Config</a></li>
+<li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
+<li><a class="" href="Django.html">Django</a></li>
 <li class="heading"><span>Entrepreneurship</span></li>
 <ul>
-<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
 </ul>
-<li><a class="" href="../Frontend.html">Frontend</a></li>
-<li><a class="" href="../JavaScript.html">JavaScript</a></li>
-<li><a class="" href="../Python.html">Python</a></li>
+<li><a class="" href="Frontend.html">Frontend</a></li>
+<li><a class="" href="JavaScript.html">JavaScript</a></li>
+<li><a class="" href="Python.html">Python</a></li>
 <li class="heading"><span>TCP IP</span></li>
 <ul>
-<li><a class="" href="IP_Addresses.html">IP Addresses</a></li>
-<li><a class="active" href="IP_Subnets.html">IP Subnets</a></li>
-<li><a class="" href="Network_Layers.html">Network Layers</a></li>
-<li><a class="" href="TCP-IP.html">TCP IP</a></li>
-<li><a class="" href="Unix_Specific.html">Unix Specific</a></li>
+<li><a class="" href="TCP-IP/IP_Addresses.html">IP Addresses</a></li>
+<li><a class="" href="TCP-IP/IP_Subnets.html">IP Subnets</a></li>
+<li><a class="" href="TCP-IP/Network_Layers.html">Network Layers</a></li>
+<li><a class="" href="TCP-IP/TCP-IP.html">TCP IP</a></li>
+<li><a class="" href="TCP-IP/Unix_Specific.html">Unix Specific</a></li>
 </ul>
-<li><a class="" href="../Vue.html">Vue</a></li>
-<li><a class="" href="../docker-compose.html">docker compose</a></li>
+<li><a class="" href="Vue.html">Vue</a></li>
+<li><a class="" href="docker-compose.html">docker compose</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <p>[[IP_Addresses]]	]]</p>
-<h3 id="subnets">Subnets <a class="heading-anchor-permalink" href="#subnets">#</a></h3>
-<p>Subnets allow you to divide the 16 bits of <code>Host ID</code> even further into a <code>Subnet ID</code> and a smaller <code>Host ID</code>. For example, 8 of these 16 bits can then become a <code>Subnet ID</code> with the last 8 being the <code>Host ID</code>. This allows network administrators to divide up the IP address (<code>Network ID</code>) they are assigned into 254 subnets with a maximum of 254 subnets per host. In this case <code>140.2.1.12</code> would be broken up as follows: <code>140.2</code> for the <code>Network ID</code>, <code>1</code> for the <code>Subnet ID</code> and <code>12</code> for the <code>Host ID</code>.</p>
-<h3 id="subnet-masks">Subnet Masks <a class="heading-anchor-permalink" href="#subnet-masks">#</a></h3>
-<p>While in the previous examles the <code>Subnet ID</code> only occupied 8 bits and the <code>Host ID</code> occupied the last 8 bits, this is not always true. The <code>Subnet Mask</code> determines which bits correspond to the <code>Network ID</code> and <code>Subnet ID</code> and which bits corresond for the <code>Host ID</code>. It is represented as follows: for each bit NOT corresponding to a <code>Host ID</code> it is set to one. For each bit corresponding to the <code>Host ID</code> it is set to 0. In the above example, the <code>Subnet Mask</code> would be 24 1’s followed by 8 0’s.</p>
-<p>This case would be represented in dotted notation as <code>255.255.255.0</code> or in Hex as <code>0xffffff00</code>. Different breaks between <code>Subnet ID</code> and <code>Host ID</code> can be described by different subnet masks. Subnets and Subnet Masks allow IP routing tables to be much smaller as only one entry is needed for the router to each subnet instead of a list of all machines on the network.</p>
+        <h1 id="dns-records">DNS Records <a class="heading-anchor-permalink" href="#dns-records">#</a></h1>
+<ul>
+<li>A <code>CNAME</code> record is an alias that points from one domain name alias to the actual domain name. On namecheap this can be done by mapping the <code>www</code> subdomain to the actual domain name for example.</li>
+<li>An <code>A</code> record maps the canonical (actual) domain name to the IP address hosting the website</li>
+</ul>
+<p>Recall, when you purchase a domain you purchase a top level domain (TLD) which is <code>&lt;domain&gt;.&lt;TLD&gt;</code> (e.g. <code>example.com</code>). <code>www</code> is a subdomain so you must map that alias to the actual canonical domain name, which in this case is <code>example.com</code>.</p>
 
       </article>
     </div>

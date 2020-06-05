@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Sean Rich: Today I Learned</title>
+
     <style>
       /*! ADAPTED
     Typeplate : Starter Kit
@@ -463,6 +465,67 @@
       h6[id]:hover .heading-anchor-permalink {
         opacity: 0.5;
       }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @-moz-keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      #menu ul li.heading {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        color: #444;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+      }
+
+      #menu ul li.heading:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      #menu ul li.heading::after {
+        content: "\276F";
+        text-align: center;
+        transition: all 0.35s;
+        transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      #menu ul li.heading.active::after {
+        transform: rotate(90deg);
+      }
+
+      #menu ul ul {
+        display: none;
+        animation: fade-in 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -webkit-animation: fade-in 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -moz-animation: fade-in 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -480,8 +543,13 @@
 <li><a class="" href="../README.html">README</a></li>
 <li><a class="" href="../index.html">index</a></li>
 <li><a class="" href="../Authentication.html">Authentication</a></li>
+<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
 <li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
 <li><a class="" href="../Django.html">Django</a></li>
+<li class="heading"><span>Entrepreneurship</span></li>
+<ul>
+<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+</ul>
 <li><a class="" href="../Frontend.html">Frontend</a></li>
 <li><a class="" href="../JavaScript.html">JavaScript</a></li>
 <li><a class="" href="../Python.html">Python</a></li>
@@ -506,10 +574,36 @@
     </div>
     <script>
       // Load contents.json if you need it
+
+      function toggleActiveClass(headingEl) {
+        let activeClass = "active";
+        headingEl.classList.contains("active")
+          ? headingEl.classList.remove(activeClass)
+          : headingEl.classList.add(activeClass);
+      }
+      function toggleDisplay(e) {
+        let headingEl;
+        let headingClassName = "heading";
+        e.target.classList.contains(headingClassName)
+          ? (headingEl = e.target)
+          : (headingEl = e.target.parentElement);
+        let ul = headingEl.nextSibling.nextSibling;
+        ul.style.display === "block"
+          ? (ul.style.display = "none")
+          : (ul.style.display = "block");
+
+        toggleActiveClass(headingEl);
+      }
+
+      let lis = document.getElementsByClassName("heading");
+
+      for (let li of lis) {
+        li.addEventListener("click", toggleDisplay);
+      }
     </script>
     <script>
       // FROM http://purecss.io/js/ui.js
-      (function(window, document) {
+      (function (window, document) {
         var layout = document.getElementById("layout"),
           menu = document.getElementById("menu"),
           menuLink = document.getElementById("menuLink");
@@ -533,7 +627,7 @@
           element.className = classes.join(" ");
         }
 
-        menuLink.onclick = function(e) {
+        menuLink.onclick = function (e) {
           var active = "active";
 
           e.preventDefault();
