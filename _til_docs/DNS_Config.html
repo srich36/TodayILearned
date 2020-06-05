@@ -577,25 +577,30 @@
     </div>
     <script>
       // Load contents.json if you need it
+      let headingClassName = "heading";
+      let activeClassName = "active";
 
+      function isActive(headingEl) {
+        return headingEl.classList.contains(activeClassName);
+      }
       function toggleActiveClass(headingEl) {
-        let activeClass = "active";
-        headingEl.classList.contains("active")
-          ? headingEl.classList.remove(activeClass)
-          : headingEl.classList.add(activeClass);
+        headingEl.classList.contains(activeClassName)
+          ? headingEl.classList.remove(activeClassName)
+          : headingEl.classList.add(activeClassName);
       }
       function toggleDisplay(e) {
         let headingEl;
-        let headingClassName = "heading";
         e.target.classList.contains(headingClassName)
           ? (headingEl = e.target)
           : (headingEl = e.target.parentElement);
-        let ul = headingEl.nextSibling.nextSibling;
-        ul.style.display === "block"
-          ? (ul.style.display = "none")
-          : (ul.style.display = "block");
 
         toggleActiveClass(headingEl);
+        let isHeadingActive = isActive(headingEl);
+        console.log(isHeadingActive);
+        let ul = headingEl.nextSibling.nextSibling;
+        isHeadingActive
+          ? (ul.style.display = "block")
+          : (ul.style.display = "none");
       }
 
       let lis = document.getElementsByClassName("heading");
