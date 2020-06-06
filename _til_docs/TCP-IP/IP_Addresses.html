@@ -692,7 +692,9 @@
       keys: [
         "content",
         "path"
-      ]
+      ],
+      distance: 100000,
+      threshold: .25,
     };
     let searchFuse;
     const searchResultsDiv = document.getElementById("search-result-links");
@@ -739,6 +741,7 @@
     }
     loadJSON("/contents.json", (data) => {
       contentsData = data.contents;
+      console.log(contentsData);
       searchFuse = new Fuse(contentsData, fuseOptions);
     }, (fail) => console.error(fail));
 
