@@ -609,30 +609,30 @@
     </a>
     <nav id="menu">
       <ul>
-<li><a class="active" href="README.html">README</a></li>
-<li><a class="" href="index.html">index</a></li>
-<li><a class="" href="Authentication.html">Authentication</a></li>
-<li><a class="" href="DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
-<li><a class="" href="Django.html">Django</a></li>
+<li><a class="" href="../README.html">README</a></li>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../Authentication.html">Authentication</a></li>
+<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
+<li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
+<li><a class="" href="../Django.html">Django</a></li>
 <li class="heading"><span>Entrepreneurship</span></li>
 <ul>
-<li><a class="" href="Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
 </ul>
-<li><a class="" href="Frontend.html">Frontend</a></li>
-<li><a class="" href="JavaScript.html">JavaScript</a></li>
-<li><a class="" href="Python.html">Python</a></li>
+<li><a class="" href="../Frontend.html">Frontend</a></li>
+<li><a class="" href="../JavaScript.html">JavaScript</a></li>
+<li><a class="" href="../Python.html">Python</a></li>
 <li class="heading"><span>TCP IP</span></li>
 <ul>
-<li><a class="" href="TCP-IP/ARP-RARP.html">ARP RARP</a></li>
-<li><a class="" href="TCP-IP/IP_Addresses.html">IP Addresses</a></li>
-<li><a class="" href="TCP-IP/IP_Subnets.html">IP Subnets</a></li>
-<li><a class="" href="TCP-IP/Network_Layers.html">Network Layers</a></li>
-<li><a class="" href="TCP-IP/TCP-IP.html">TCP IP</a></li>
-<li><a class="" href="TCP-IP/Unix_Specific.html">Unix Specific</a></li>
+<li><a class="active" href="ARP-RARP.html">ARP RARP</a></li>
+<li><a class="" href="IP_Addresses.html">IP Addresses</a></li>
+<li><a class="" href="IP_Subnets.html">IP Subnets</a></li>
+<li><a class="" href="Network_Layers.html">Network Layers</a></li>
+<li><a class="" href="TCP-IP.html">TCP IP</a></li>
+<li><a class="" href="Unix_Specific.html">Unix Specific</a></li>
 </ul>
-<li><a class="" href="Vue.html">Vue</a></li>
-<li><a class="" href="docker-compose.html">docker compose</a></li>
+<li><a class="" href="../Vue.html">Vue</a></li>
+<li><a class="" href="../docker-compose.html">docker compose</a></li>
 </ul>
     </nav>
     <article id="main" class="content">
@@ -642,18 +642,11 @@
 
       </div>
 
-      <h1 id="collection-of-today-i-learned-(til)">Collection of Today I Learned (TIL) <a class="heading-anchor-permalink" href="#collection-of-today-i-learned-(til)">#</a></h1>
-<p>This repository serves as a random collection of TIL’s over a random period of days. Some of these were review and others were some concepts were new.</p>
-<ul>
-<li><a href="Authentication.html">Authentication</a></li>
-<li><a href="Distributed_Systems.html">Distributed Systems</a></li>
-<li><a href="Django.html">Django</a></li>
-<li><a href="docker-compose.html">docker-compose</a></li>
-<li><a href="Frontend.html">Frontend</a></li>
-<li><a href="JavaScript.html">JavaScript</a></li>
-<li><a href="Python.html">Python</a></li>
-<li><a href="Vue.html">Vue</a></li>
-</ul>
+      <h2 id="arp-(address-resolution-protocol)">ARP (Address Resolution Protocol) <a class="heading-anchor-permalink" href="#arp-(address-resolution-protocol)">#</a></h2>
+<p>ARP is the protocol used to translate an IP address to a physical hardware (MAC) address. To do this, the questioning machine sends out a broadcast frame to every device on the network with the IP address in question, asking for the hardware address corresponding to the given IP address. The device with the given IP address then responds with its hardware address.</p>
+<p>These hardware addresses are needed because the link layer works with hardware addresses and knows nothing about the IP protocol. Thus, the sending of frames uses the hardware addresses between machines. ARP results are cached and can be viewed with <code>arp -a</code>.</p>
+<h2 id="rarp-(reverse-address-resolution-protocol)">RARP (Reverse Address Resolution Protocol) <a class="heading-anchor-permalink" href="#rarp-(reverse-address-resolution-protocol)">#</a></h2>
+<p>RARP is used less and is a way to map hardware addresses to IP addresses. This can be used when bootstrapping a system, when the system does not yet know its IP address. It will send out a frame to devices on the network asking for the IP address corresponding to its hardware address.</p>
 
     </article>
   </div>
