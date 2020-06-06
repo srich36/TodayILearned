@@ -110,5 +110,7 @@
   - Travis got scorched on lawsuits before Uber thus leading to his personality
 - Uber for the first couple years was in the black-car market, Lyft came in and did borderline-illegal peer-to-peer ridesharing which blew up the unit economics
   - Thus it was a race to outlast each other and raise as much capital as possible so the unit economics could return to profitability
+- Uber had a massive culture problem in 2017 and Dara Khosrowshahi became CEO and helped fix the culture
+- Uber's A+ possibility is having drivers be 100% occupied between Eats/Rideshare, etc. so then they only use Uber and not a competitor ;like Lyft. This will turn the unit economics in their favor.
 
 [Back to top](#table-of-contents)
