@@ -13,6 +13,7 @@
 - [Netflix](#netflix)
 - [Tesla](#tesla)
 - [Uber](#uber)
+- [Pinterest](#pinterest)
 
 ## Zoom
 
@@ -112,5 +113,17 @@
   - Thus it was a race to outlast each other and raise as much capital as possible so the unit economics could return to profitability
 - Uber had a massive culture problem in 2017 and Dara Khosrowshahi became CEO and helped fix the culture
 - Uber's A+ possibility is having drivers be 100% occupied between Eats/Rideshare, etc. so then they only use Uber and not a competitor ;like Lyft. This will turn the unit economics in their favor.
+
+[Back to top](#table-of-contents)
+
+## Pinterest
+
+- Founder/Eventual CEO: Ben Silverman
+- Key theme: Pinterest did a great job investing in their growth _before_ they actually grew
+  - Invested in HR, Ops, executives, culture, etc.
+- Women drove a lot of the success at the company throughout all stages of its life
+  - They had a ton of women engineers which matched the demographics of their user base and really pushed the product forward
+- There is a lot of value in keeping a team together
+  - You begin to learn everyone's strengths and weaknesses and get quicker at building things together
 
 [Back to top](#table-of-contents)
