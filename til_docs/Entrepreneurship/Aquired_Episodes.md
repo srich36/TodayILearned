@@ -12,6 +12,7 @@
 - [Venmo](#venmo)
 - [Netflix](#netflix)
 - [Tesla](#tesla)
+- [Uber](#uber)
 
 ## Zoom
 
@@ -101,3 +102,11 @@
 [Back to top](#table-of-contents)
 
 ## Tesla
+
+## Uber
+
+- Theme of companies IPO'ing in the A+ era (2018-2019 ish) is because companies were staying private longer. Where previously it was 3-4 years post-founding until going public, now it is closer to 10-12 years. Thus companies founded post-2008 recession were all IPO'ing around the same time
+- Co-founder/CEO: Travis Kalanick, Co-founder: Garret Camp
+  - Travis got scorched on lawsuits before Uber thus leading to his personality 
+- Uber for the first couple years was in the black-car market, Lyft came in and did borderline-illegal peer-to-peer ridesharing which blew up the unit economics
+  - Thus it was a race to outlast each other and raise as much capital as possible so the unit economics could return to profitability
