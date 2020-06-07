@@ -127,3 +127,14 @@
   - You begin to learn everyone's strengths and weaknesses and get quicker at building things together
 
 [Back to top](#table-of-contents)
+
+## ESPN 
+
+- constantly be analyzing your business model: paying cable providers vs them paying you
+- Be the thing that provides value not the commodity 
+- Capital cities buys ABC worth more than their entire company “minnow swallows whale” -> capital cities then becomes ABC
+- ESPN created value then captured it (March Madness, Sunday Night Football, Monday Night Football are all things they essentially created) then captured it with their network
+- They didn’t ride the wave, they created it 
+- Business model innovation coupled with riding/creating a wave is key to creating a massive 
+
+[Back to top](#table-of-contents)
