@@ -14,6 +14,11 @@
 - [Tesla](#tesla)
 - [Uber](#uber)
 - [Pinterest](#pinterest)
+- [ESPN](#espn)
+- [Snap](#snap)
+- [Softbank](#softbank)
+- [Github](#github)
+- [Lyft](#lyft)
 
 ## Zoom
 
@@ -128,13 +133,54 @@
 
 [Back to top](#table-of-contents)
 
-## ESPN 
+## ESPN
 
-- constantly be analyzing your business model: paying cable providers vs them paying you
-- Be the thing that provides value not the commodity 
+- Theme: constantly be analyzing your business model: paying cable providers vs them paying you
+- Be the thing that provides value not the commodity
 - Capital cities buys ABC worth more than their entire company “minnow swallows whale” -> capital cities then becomes ABC
 - ESPN created value then captured it (March Madness, Sunday Night Football, Monday Night Football are all things they essentially created) then captured it with their network
-- They didn’t ride the wave, they created it 
-- Business model innovation coupled with riding/creating a wave is key to creating a massive 
+- They didn’t ride the wave, they created it
+  - Business model innovation coupled with riding/creating a wave is key to creating a massive
+
+[Back to top](#table-of-contents)
+
+## Snap
+
+- Theme: don't be afraid of a large incumbent launching your feature - it will bring you publicity (like when Facebook launching a Snap competitor)
+- Founders originally stopped working on Snapchat until one of Evan Spiegel's cousins schools started using it to get around high-school messaging restrictions
+  
+[Back to top](#table-of-contents)
+
+## Softbank
+- Founder: Masayoshi Son (Masa)
+  - He has an incredible story and has done amazingly well in business - even surpassing Bill Gates in wealth at one point during the tech bubble
+  - Once the tech bubble burst he lost more money than anyone in history - $70 billion
+- Huge on getting in-person meetings: meeting with McDonald's businessman, meeting with Steve Jobs for phone idea/becoming the exclusive provider in Japan
+- Masa made a $20 million investment in Alibaba which turned into $60 billion
+  - Could be the most successful investment of all time
+- Softbank went into broadband, telecommunications, investments, etc. because after the tech bubble burst Masa realized that stable cash flow is **really** important in building sustainable businesses
+- Softbank is well-known for its Vision Fund, a $100 billion fund for growth capital
+  - This is by far the biggest fund ever raised
+  - Regardless of how successful it ends up being, this will generate $15 billion in management fees by the end of the 12-15 year lockup period -> stable cash flow
+  - One of the reasons they were so successful in raising this capital is because it is one of the only avenues for massive wealth funds like the Saudi Arabia sovereign wealth fund to generate returns
+    - You can't deploy that much capital anywhere else
+
+[Back to top](#table-of-contents)
+
+## Github
+
+- The original version of Git came after the main distributed version control company revoked its free licenses for the open-source community
+  - Linus built the first prototype of git in like a week
+- Theme: the wax and wane of technologies - centralized/decentralized, client-server/local, these go through cycles
+- Theme: It is **really** important to nail the line for freemium models at the right point where it benefits the overall product
+  - Github: free public repos but paid private repos
+    - The free version which benefits the open-source community and the Github product as a whole. For companies protecting their IP they have to pay. This is a perfect freemium model.
+  - Zoom: free calls up to 40 mins
+    - Free customers can just start another call
+    - The ideal business meeting, however, is 45 minutes thus the 40 minute freemium model, encouraging enterprise users to pay
+
+[Back to top](#table-of-contents)
+
+## Lyft
 
 [Back to top](#table-of-contents)
