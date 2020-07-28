@@ -47,3 +47,10 @@ Calling `printWord` will now print the word twice. You always want to include `*
 ### Introspection vs Reflection
 
 `Introspection` is the ability for an object to know about itself at runtime. `Reflection` is one step further: the ability to modify itself at runtime.
+
+### General Tips
+
+- To get a value from a tuple you can convert to a dictionary and then use the get method
+- Set: A collection that is unordered, unindexed, and unique
+- Python 3.5+ supports type hints
+  - `def my_func(num: int) -> str:`

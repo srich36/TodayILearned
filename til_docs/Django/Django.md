@@ -1,58 +1,5 @@
 # Django Basics
 
-### Queryset API
-
-- `get(pk=<num>)` will return one object of the model instance
-- `filter, exclude` will return querysets
-- Querysets are sliceable like `<ModelName>.objects.all()[:5]`
-- `update` takes keyword args to update a model
-- **All queryset methods,** `update, save`**, etc. except `delete` are also exposed to the model manager to act on all objects**
-- `selected_related()` follows foreign key relationships
-
-### Field Lookups
-
-These are predefined keyword arguments to queryset filter methods to help filter the data. **They generally take the form `field_name__lookuptype=value` e.g. `Posts.objects.all().filter(pub_date__lte='2016-01-01')` for less than or equal to.**
-
-**Alternatively if you don't have a lookup type you can just do `field_name=value`**. This is just synatactic sugar for the default `field_name__exact=value`.
-
-### Relationship spanning
-
-Filtering can also span relationships. For example, consider an Entry model with a foreign key to a Blog model with a name field. You can filter with `Entry.objects.all().filter(blog__name=value)`
-
-### Related Name
-
-Related names are set on the model defining a foreign key field with `related_name=<related_name>`. This can be then used to essentially reverse query from the original model all the model instances with foreign keys references to it. Take this example:
-
-```python
-class Department(models.model):
-    description = models.TextField()
-
-
-class Employee(models.model):
-    name = models.charField()
-    department = models.ForeignKey(
-        'Department',
-        on_delete=models.CASCADE,
-        related_name="employees"
-    )
-```
-
-
-### select_related
-
-Select related is a way to pre-populate foreign key relationship data in one query instead of grabbing the initial model, then getting the foreign key representation of it. This accomplishes the same thing as normal indexing but in one less database hit. While that does not make a ton of sense, an example will clear it up
-
-```python
-post = Post.objects.get(id=2) # Hits database to get post
-user = post.user # Hits database again to get user
-```
-
-```python
-post = Post.objects.select_related('users').get(id=2) #
-user = post.user # Doesn't hit the database because the post model is already populated with user because of select_related
-```
-
-From a department instance you can get all employees with a foreign key reference to that department with `<department_model>.employees.all()`. Without setting the related field you would have to do `<department_model>.employee_set.all()`.
 
 ### Authentication Backends
 
@@ -106,3 +53,19 @@ A query set is essentially a `select` SQL statement with as many filters as desi
 **A queryset does not actually hit the database until it is iterated through or another form of evaluation.** `<Model></Model>.objects.all()` **will not evaluate the queryset and thus will not hit the database**
 
 You can easily chain queryset filters together. This chaining is immutable and returns a new queryset every time
+
+## General Tips
+
+- It may be best to avoid signals since they are hard to track down and hard to debug
+- Go "top to bottom" with urls 
+  - e.g. plans/\<plan_number\>/approvals to get all the approvals for a plan
+- To add a `unique=True` field to tables with rows:
+  1. Create migration to add a field without `unique=True`
+  2. Create migration to populate existing fields with UUIDs
+  3. Alter field to include unique option
+    - This is necessary because the initial field value will only be evaluated once when applied to all of the rows, thus it will fail the duplication constraint
+- `safe=False` is required in a `JsonResponse` whenever the object you are trying to serialize is not a dictionary
+  - `DRF` returns a dictionary type called a `ReturnDict`
+- If you are ever getting import errors when you shouldn't be, there might be a circular dependency
+  - You can't have a model depend on an external file, then have that external file depend on the model
+- When you are serializing an array of items with `DRF` you need the flag `many=True`
