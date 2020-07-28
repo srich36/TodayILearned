@@ -19,6 +19,33 @@
 - [Softbank](#softbank)
 - [Github](#github)
 - [Lyft](#lyft)
+- [Slack](#slack)
+- [Google Docs](#google-docs)
+- [Spotify](#spotify)
+- [Nest](#nest)
+- [Lucas Film](#lucas-film)
+- [Alibaba](#alibaba)
+- [ARM](#arm)
+- [T-mobile](#t-mobile)
+- [Dropbox](#dropbox)
+- [Twitch](#twitch)
+- [Siri](#siri)
+- [Waze](#waze)
+- [PayPal](#paypal)
+- [Virgin Airlines](#virgin-airlines)
+- [Next](#next)
+- [Skype](#skype)
+- [BAMTech](#bamtech)
+- [Square](#square)
+- [AOL + Time Warner](#aol--time-warner)
+- [HP Acquiring Opsware](#hp-acquiring-opsware)
+- [Atlassian](#atlassian)
+- [Stitch Fix](#stitch-fix)
+- [Beats By Dre](#beats-by-dre)
+- [Booking.com](#bookingcom)
+- [Superhuman](#superhuman)
+- [Against Gravity](#against-gravity)
+- [Jason Calacalanis](#jason-calacalanis)
 
 ## Zoom
 
@@ -148,20 +175,21 @@
 
 - Theme: don't be afraid of a large incumbent launching your feature - it will bring you publicity (like when Facebook launching a Snap competitor)
 - Founders originally stopped working on Snapchat until one of Evan Spiegel's cousins schools started using it to get around high-school messaging restrictions
-  
+
 [Back to top](#table-of-contents)
 
 ## Softbank
+
 - Founder: Masayoshi Son (Masa)
   - He has an incredible story and has done amazingly well in business - even surpassing Bill Gates in wealth at one point during the tech bubble
-  - Once the tech bubble burst he lost more money than anyone in history - $70 billion
+  - Once the tech bubble burst he lost more money than anyone in history - \$70 billion
 - Huge on getting in-person meetings: meeting with McDonald's businessman, meeting with Steve Jobs for phone idea/becoming the exclusive provider in Japan
 - Masa made a $20 million investment in Alibaba which turned into $60 billion
   - Could be the most successful investment of all time
 - Softbank went into broadband, telecommunications, investments, etc. because after the tech bubble burst Masa realized that stable cash flow is **really** important in building sustainable businesses
-- Softbank is well-known for its Vision Fund, a $100 billion fund for growth capital
+- Softbank is well-known for its Vision Fund, a \$100 billion fund for growth capital
   - This is by far the biggest fund ever raised
-  - Regardless of how successful it ends up being, this will generate $15 billion in management fees by the end of the 12-15 year lockup period -> stable cash flow
+  - Regardless of how successful it ends up being, this will generate \$15 billion in management fees by the end of the 12-15 year lockup period -> stable cash flow
   - One of the reasons they were so successful in raising this capital is because it is one of the only avenues for massive wealth funds like the Saudi Arabia sovereign wealth fund to generate returns
     - You can't deploy that much capital anywhere else
 
@@ -182,5 +210,264 @@
 [Back to top](#table-of-contents)
 
 ## Lyft
+
+- Pioneered the peer-to-peer ridesharing
+  - It was basically illegal when they started and laws changed to accommodate it
+    - Uber tried to get Lyft shut down
+- Was founded on the mission to reduces emissions by carpooling
+  - The environmental consciousness is a core tenet of Lyft
+
+[Back to top](#table-of-contents)
+
+## Slack
+
+- When Stewart Butterfield had to lay people off of his game company he made sure they all got jobs
+  - Built up trust for them to come to work at Slack
+- Great companies are built at the intersection of cultural, technological, and business model shift
+- Slack basically wrapped IRC (internet relay control)
+- They used Twitter to amplify the messages of people evanelizing Slack
+- Nailed their freemium model
+  - number of searchable and archivable messages instead of number of users
+    - This encourages people to show the functionality to coworkers
+- DL (Direct Listing) vs. IPO
+  - No additional shares issued so there is no dilution
+  - Great for companies who are profitable and don't need money
+  - No lockup period for DPO's. Employees/people can liquidate stock
+- There are two ways to make money: "bundling and unbundling"
+- They understand the customer funnel really well
+  - They find triggers where customers won't churn (2000 messages per team for Slack)
+  - Therefore they designed the product around having teams reach 2000 messages since they know once they hit that point they won't churn
+- They were their own first customer
+  - This way they learned what the customers wanted
+- Customer acquisition cost at its most basic sense is (new customers) divided by marketing dollars spend
+- Started in Canada
+
+[Back to top](#table-of-contents)
+
+## Google Docs
+
+- A ton of people use Google productivity tools but it isn't a great business
+- Finding a good business is sometimes better than finding something that may get more users
+- Theme: **Focusing on your core product is the most imporant thing in a startup**
+- "If you don't have a struggle you can't have something great" - something from Pixar
+
+[Back to top](#table-of-contents)
+
+## Spotify
+
+- Founded in Sweden
+- CEO: Daniel Eck
+- Growth hacking strategy: make it invite only with the invites coming from other users _OR_ pay to skip the invite
+- Sean Parker wrote an email to Spotify telling them they had to integrate with Facebook for viral sharing
+  - Iconic email and a masterpiece
+    - Facebook as a distribution vehicle fueled Spotify's growth
+- Have a paid user percentage somewhere in the high 40%
+- Barry McCarthy organized Spotify DL as CFO
+  - Helped lead Netflix too
+- Theme: **Tech companies generally have really high (70-80 ish percent) gross margins since the marginal cost of producing another piece of software is small**
+  - Spotify, however, doesn't have these margins because they have to pay artists. Their gross margins are around 20%
+
+[Back to top](#table-of-contents)
+
+## Nest
+
+- Theme: **If you are building a platform company most of the time you need to resources of a platform company (e.g. Google, Facebook kind of) to succeed**
+- "People who are really serious about software should make their own hardware" - Alan Kay
+
+[Back to top](#table-of-contents)
+
+## Lucas Film
+
+- Theme: **successful acquisitions are hands-off** (e.g. Instagram, Pixar)
+  - Preserve the culture of the acquiree as much as possible
+
+[Back to top](#table-of-contents)
+
+## Alibaba
+
+- Theme: **In emerging marketplaces it's not about who has the most market share now, it's about who will have the most marketshare when consumers enter the market**
+
+[Back to top](#table-of-contents)
+
+## ARM
+
+- ARM pioneered the reduced instruction set (RISC)
+  - Less power, more performance
+  - However, Intel had the monopoly with x86 so that was what most computers used
+- Low power chips led to a perfect use case in phones
+  - ARM has 96% market share in all phones, embedded devices, etc.
+- Theme: \*\*It's not about what your TAM is today, it's more important what your TAM will be tomorrow
+
+[Back to top](#table-of-contents)
+
+## T-mobile
+
+- Listen to customer service calls to listen to your customers
+- The T-mobile strategy:
+  - Declare victory on an enemy (AT&T), pick on them, then attack them
+- It's a Warren Buffet style business
+  - Cable and predictable cash flow
+
+[Back to top](#table-of-contents)
+
+## Dropbox
+
+- Theme: **stick to your core product**
+  - Dropbox did not always do a great job with this as they grew
+- Theme: **solve a problem people have and make it just work**
+
+[Back to top](#table-of-contents)
+
+## Twitch
+
+- For every one content provider there is like 100 Lurkers
+- Twitch takes half of the subscription take rate
+
+[Back to top](#table-of-contents)
+
+## Siri
+
+- Theme: **more natural computing with voice-based control and interactive technology could be the future**
+
+[Back to top](#table-of-contents)
+
+## Waze
+
+- The right way to advertise on mobile isn't banner ads, it's native, location-sensitive, etc.
+
+[Back to top](#table-of-contents)
+
+## PayPal
+
+- Viral growth hacking: invite a friend and get free money
+- Theme: **Can't start with the end state, start with something really small then rapidly iterate with real market feedback**
+
+[Back to top](#table-of-contents)
+
+## Virgin Airlines
+
+- Theme: **Your moat is one of the most important things when building a business**
+  - The airline industry has little moat
+- Theme: \*\*Focus on what you are good at - your product can't be everything to everyone
+
+[Back to top](#table-of-contents)
+
+## Next
+
+- It is a difficult problem to take highly research oriented technology and turn it into a product
+- It's super important to make the products "just work"
+
+[Back to top](#table-of-contents)
+
+## Skype
+
+- Dual-track process: file for IPO while simultaneously fielding acquisition offers
+
+[Back to top](#table-of-contents)
+
+## BAMTech
+
+- Stairstep your way into becoming a great company by solving real problems one at a time
+  - You can't solve every problem at once
+
+[Back to top](#table-of-contents)
+
+## Square
+
+- Reinvented founder stories are probably more common than not
+  - The power of stories draws people in
+- One of the founders: Jack Dorsey
+- They got really good at the fraud prevention which is what got Square in the industry and allowed them to stay
+- They sent the card reader for free and took fees on transactions
+  - Business model innovation
+- **Naming a company**: pick an empty word (Expedia, Square, etc.)
+  - This will allow you to fill it with whatever you want and allow for pivots
+  - For example, Square does not constrain you to payments
+- Net 0 churn
+  - The businesses that do churn are netted out by the businesses that don't churn growing with the platform
+
+[Back to top](#table-of-contents)
+
+## AOL + Time Warner
+
+- "The worst acquisition of all time"
+- AOL was a sinking ship and grabbed on to Time Warner to try to get some real value with its inflated internet shares
+
+[Back to top](#table-of-contents)
+
+## HP Acquiring Opsware
+
+- HP is Hewlett-Packard
+- There are two types of markets and you **need** to know which one you are in
+  - Emerging and consolidating
+- In the enterprise the best product doesn't always win
+  - Often it's the product with the best sales (or the ones who can sell to the IT department head or CFO)
+- There is a lot of IP in how to sell certain software products
+- Getting the timing right for a product is the absolute most important part of a business
+  - **This is what 10x people have the ability to do**
+
+[Back to top](#table-of-contents)
+
+## Atlassian
+
+- "Third Wave" of enterprise software: you don't need huge sales forces anymore, the product sells itself
+  - It is cheap enough and on a per-person basis where individuals can buy the product themselves
+    - Doesn't have to go through the CFO
+- The average SAAS company spends 50-100% of revenue on marketing for growth, Atlassian spends around 20%
+- General growth hacking tip: Referral bonuses are a huge vehicle for growth in consumer facing products
+
+[Back to top](#table-of-contents)
+
+## Stitch Fix
+
+- Opportunities for businesses aren't always created from technological shifts, sometimes it is societal
+  - e.g. It becoming okay to have another person stay in your home - AirBNB
+
+[Back to top](#table-of-contents)
+
+## Beats By Dre
+
+- Disruption: instead of reproducing music exactly as it sounds you want it to be emotional, bass boosted, etc.
+- To get people excited about something: clue them in on it early and ask for their feedback. They will feel like they have skin in the game
+- Random: Monster completely overcharges for cables
+- Apple Music kind of came from Beats Music
+
+[Back to top](#table-of-contents)
+
+## Booking.com
+
+- Accumulated long-tail supply: collected smaller hotels who were not listed on other platforms and were the only platform that had these hotels listed
+- **Getting customers to convert in marketplace businesses is your biggest lever**
+
+[Back to top](#table-of-contents)
+
+## Superhuman
+
+- Landing page: Took 2 hours to make on Squarespace and asked: what email client do you use? And what annoys you about it?
+  - This is value proposition discovery and validation
+- "The only way to win is to be contrarian and right"
+- Used to Van Westendorp pricing methodology
+- **The fundamental job of a founder is to create momentum**
+- Paul Graham essay: startup=growth
+- Superhuman founder: Rahul Vohra
+- Measured product-market fit numerically and systematically
+- Used typeform for surveys
+
+[Back to top](#table-of-contents)
+
+## Against Gravity
+
+- **It is much more common for startups to die of indigestion from too much opportunity than starvation of too little**
+- Qualification of investors - making sure they can help you in your venture - is super important for picking the right ones
+- It is a lot easier to put out MVP's for products in emerging markets than markets in which there are already products with product-market fit
+- **You get the investors you ask for - be clear and honest about what you want/what your company is**
+- You have to release something for feedback, you can't just build it in secret for a long time
+  - This is how you build the wrong thing
+
+[Back to top](#table-of-contents)
+
+## Jason Calacalanis
+
+- **How to get the most out of networking: always invite people to dinner, pick up the check, and introduce people to one another without expecting anything out of it**
 
 [Back to top](#table-of-contents)

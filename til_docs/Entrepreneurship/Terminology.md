@@ -8,3 +8,5 @@
 - lockup: the period of time where you cannot access your capital in a fund. E.g. one year lockup.
 - runway: how long a startup will survive at the current revenue and expense rates
 - Copyleft: an open-source paradigm where by using a copyleft software you are obligated to both open-source whatever you are working on and contribute back to the original software
+- s1: The form a company files when going public
+- f1: The foreign version of an s1
