@@ -8,3 +8,4 @@ A browser rendering engine, e.g. `Gecko` and `Webkit` displays the webpages writ
 
 - When you inherit a class and it does not override the constructor it calls the parent constructor by default
 - `Array.slice()` returns a shallow copy of an array
+- The spread operator `...` was originally added for arrays in es6. However, a later change enabled the spread operator to be used with objects too, e.g. `const newObj = {...obj}`
