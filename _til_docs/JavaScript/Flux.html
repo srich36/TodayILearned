@@ -609,49 +609,49 @@
     </a>
     <nav id="menu">
       <ul>
-<li><a class="" href="index.html">index</a></li>
-<li><a class="" href="Authentication.html">Authentication</a></li>
-<li><a class="" href="DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="Databases.html">Databases</a></li>
-<li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../Authentication.html">Authentication</a></li>
+<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
+<li><a class="" href="../Databases.html">Databases</a></li>
+<li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
 <li class="heading"><span>Django</span></li>
 <ul>
-<li><a class="" href="Django/Django.html">Django</a></li>
-<li><a class="" href="Django/Migrations.html">Migrations</a></li>
-<li><a class="" href="Django/Models.html">Models</a></li>
-<li><a class="" href="Django/Querysets.html">Querysets</a></li>
+<li><a class="" href="../Django/Django.html">Django</a></li>
+<li><a class="" href="../Django/Migrations.html">Migrations</a></li>
+<li><a class="" href="../Django/Models.html">Models</a></li>
+<li><a class="" href="../Django/Querysets.html">Querysets</a></li>
 </ul>
 <li class="heading"><span>Entrepreneurship</span></li>
 <ul>
-<li><a class="" href="Entrepreneurship/Acronyms.html">Acronyms</a></li>
-<li><a class="" href="Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
-<li><a class="" href="Entrepreneurship/Business_Analysis.html">Business Analysis</a></li>
-<li><a class="" href="Entrepreneurship/Terminology.html">Terminology</a></li>
-<li><a class="" href="Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
+<li><a class="" href="../Entrepreneurship/Acronyms.html">Acronyms</a></li>
+<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Business_Analysis.html">Business Analysis</a></li>
+<li><a class="" href="../Entrepreneurship/Terminology.html">Terminology</a></li>
+<li><a class="" href="../Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
 </ul>
-<li><a class="" href="File_Sharing.html">File Sharing</a></li>
-<li><a class="active" href="Frontend.html">Frontend</a></li>
+<li><a class="" href="../File_Sharing.html">File Sharing</a></li>
+<li><a class="" href="../Frontend.html">Frontend</a></li>
 <li class="heading"><span>JavaScript</span></li>
 <ul>
-<li><a class="" href="JavaScript/Flux.html">Flux</a></li>
-<li><a class="" href="JavaScript/JavaScript.html">JavaScript</a></li>
-<li><a class="" href="JavaScript/React.html">React</a></li>
-<li><a class="" href="JavaScript/Vue.html">Vue</a></li>
+<li><a class="active" href="Flux.html">Flux</a></li>
+<li><a class="" href="JavaScript.html">JavaScript</a></li>
+<li><a class="" href="React.html">React</a></li>
+<li><a class="" href="Vue.html">Vue</a></li>
 </ul>
-<li><a class="" href="Python.html">Python</a></li>
+<li><a class="" href="../Python.html">Python</a></li>
 <li class="heading"><span>TCP IP</span></li>
 <ul>
-<li><a class="" href="TCP-IP/ARP-RARP.html">ARP RARP</a></li>
-<li><a class="" href="TCP-IP/ICMP.html">ICMP</a></li>
-<li><a class="" href="TCP-IP/IP_Addresses.html">IP Addresses</a></li>
-<li><a class="" href="TCP-IP/IP_Fragmentation.html">IP Fragmentation</a></li>
-<li><a class="" href="TCP-IP/IP_Subnets.html">IP Subnets</a></li>
-<li><a class="" href="TCP-IP/Network_Layers.html">Network Layers</a></li>
-<li><a class="" href="TCP-IP/TCP-IP.html">TCP IP</a></li>
-<li><a class="" href="TCP-IP/Unix_Specific.html">Unix Specific</a></li>
-<li><a class="" href="TCP-IP/routing.html">routing</a></li>
+<li><a class="" href="../TCP-IP/ARP-RARP.html">ARP RARP</a></li>
+<li><a class="" href="../TCP-IP/ICMP.html">ICMP</a></li>
+<li><a class="" href="../TCP-IP/IP_Addresses.html">IP Addresses</a></li>
+<li><a class="" href="../TCP-IP/IP_Fragmentation.html">IP Fragmentation</a></li>
+<li><a class="" href="../TCP-IP/IP_Subnets.html">IP Subnets</a></li>
+<li><a class="" href="../TCP-IP/Network_Layers.html">Network Layers</a></li>
+<li><a class="" href="../TCP-IP/TCP-IP.html">TCP IP</a></li>
+<li><a class="" href="../TCP-IP/Unix_Specific.html">Unix Specific</a></li>
+<li><a class="" href="../TCP-IP/routing.html">routing</a></li>
 </ul>
-<li><a class="" href="docker-compose.html">docker compose</a></li>
+<li><a class="" href="../docker-compose.html">docker compose</a></li>
 </ul>
     </nav>
     <article id="main" class="content">
@@ -661,10 +661,18 @@
 
       </div>
 
-      <h4 id="color-changes">Color changes <a class="heading-anchor-permalink" href="#color-changes">#</a></h4>
-<p>Proper design frameworks have a standard color set. To theme your app you can easily darken and lighten each of the colors with darken or lighten classes. This produces colors that go together well.</p>
-<h3 id="icons">Icons <a class="heading-anchor-permalink" href="#icons">#</a></h3>
-<p>Icons always act weird in Vue, you cannot toggle their classes dynamically and they weren’t appearing when accessing by <code>wrapper.find</code> in just</p>
+      <h1 id="flux">Flux <a class="heading-anchor-permalink" href="#flux">#</a></h1>
+<p>Flux is a pattern consisting of a singleton dispatcher that emits events (actions) with a <code>type</code> and <code>payload</code> , triggering callback functions in all stores. The stores then <code>switch</code> on the action type and decide if they should respond to the emitted action</p>
+<p>Data flow is generally as follows:</p>
+<ol>
+<li>Component calls action creator function</li>
+<li>The action creator may make an API call and await the response</li>
+<li>The action creator then dispatches an event through the `Dispatcher’ singleton</li>
+<li>When stores are registered to the <code>Dispatcher</code> in their constructor, they register a callback function to execute on every emitted action. Thus, each store will execute its callback</li>
+<li>If the store is responsible for the action <code>type</code> (as determined by the <code>switch</code> statement) it updates its data</li>
+<li>A higher order component (HOC) is used to inject store state as props into connected components. Thus, whenever the store state changes so do the props of connected components, thus causing them to re-render</li>
+</ol>
+<p>In general, the <code>Dispatcher</code> is simply a registry for callbacks</p>
 
     </article>
   </div>

@@ -609,30 +609,49 @@
     </a>
     <nav id="menu">
       <ul>
-<li><a class="" href="README.html">README</a></li>
-<li><a class="" href="index.html">index</a></li>
-<li><a class="" href="Authentication.html">Authentication</a></li>
-<li><a class="" href="DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
-<li><a class="active" href="Django.html">Django</a></li>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../Authentication.html">Authentication</a></li>
+<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
+<li><a class="" href="../Databases.html">Databases</a></li>
+<li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
+<li class="heading"><span>Django</span></li>
+<ul>
+<li><a class="" href="Django.html">Django</a></li>
+<li><a class="" href="Migrations.html">Migrations</a></li>
+<li><a class="" href="Models.html">Models</a></li>
+<li><a class="active" href="Querysets.html">Querysets</a></li>
+</ul>
 <li class="heading"><span>Entrepreneurship</span></li>
 <ul>
-<li><a class="" href="Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Acronyms.html">Acronyms</a></li>
+<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Business_Analysis.html">Business Analysis</a></li>
+<li><a class="" href="../Entrepreneurship/Terminology.html">Terminology</a></li>
+<li><a class="" href="../Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
 </ul>
-<li><a class="" href="Frontend.html">Frontend</a></li>
-<li><a class="" href="JavaScript.html">JavaScript</a></li>
-<li><a class="" href="Python.html">Python</a></li>
+<li><a class="" href="../File_Sharing.html">File Sharing</a></li>
+<li><a class="" href="../Frontend.html">Frontend</a></li>
+<li class="heading"><span>JavaScript</span></li>
+<ul>
+<li><a class="" href="../JavaScript/Flux.html">Flux</a></li>
+<li><a class="" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li><a class="" href="../JavaScript/React.html">React</a></li>
+<li><a class="" href="../JavaScript/Vue.html">Vue</a></li>
+</ul>
+<li><a class="" href="../Python.html">Python</a></li>
 <li class="heading"><span>TCP IP</span></li>
 <ul>
-<li><a class="" href="TCP-IP/ARP-RARP.html">ARP RARP</a></li>
-<li><a class="" href="TCP-IP/IP_Addresses.html">IP Addresses</a></li>
-<li><a class="" href="TCP-IP/IP_Subnets.html">IP Subnets</a></li>
-<li><a class="" href="TCP-IP/Network_Layers.html">Network Layers</a></li>
-<li><a class="" href="TCP-IP/TCP-IP.html">TCP IP</a></li>
-<li><a class="" href="TCP-IP/Unix_Specific.html">Unix Specific</a></li>
+<li><a class="" href="../TCP-IP/ARP-RARP.html">ARP RARP</a></li>
+<li><a class="" href="../TCP-IP/ICMP.html">ICMP</a></li>
+<li><a class="" href="../TCP-IP/IP_Addresses.html">IP Addresses</a></li>
+<li><a class="" href="../TCP-IP/IP_Fragmentation.html">IP Fragmentation</a></li>
+<li><a class="" href="../TCP-IP/IP_Subnets.html">IP Subnets</a></li>
+<li><a class="" href="../TCP-IP/Network_Layers.html">Network Layers</a></li>
+<li><a class="" href="../TCP-IP/TCP-IP.html">TCP IP</a></li>
+<li><a class="" href="../TCP-IP/Unix_Specific.html">Unix Specific</a></li>
+<li><a class="" href="../TCP-IP/routing.html">routing</a></li>
 </ul>
-<li><a class="" href="Vue.html">Vue</a></li>
-<li><a class="" href="docker-compose.html">docker compose</a></li>
+<li><a class="" href="../docker-compose.html">docker compose</a></li>
 </ul>
     </nav>
     <article id="main" class="content">
@@ -642,8 +661,7 @@
 
       </div>
 
-      <h1 id="django-basics">Django Basics <a class="heading-anchor-permalink" href="#django-basics">#</a></h1>
-<h3 id="queryset-api">Queryset API <a class="heading-anchor-permalink" href="#queryset-api">#</a></h3>
+      <h3 id="queryset-api">Queryset API <a class="heading-anchor-permalink" href="#queryset-api">#</a></h3>
 <ul>
 <li><code>get(pk=&lt;num&gt;)</code> will return one object of the model instance</li>
 <li><code>filter, exclude</code> will return querysets</li>
@@ -680,35 +698,14 @@ user = post.user # Hits database again to get user
 user = post.user # Doesn't hit the database because the post model is already populated with user because of select_related
 </code></pre>
 <p>From a department instance you can get all employees with a foreign key reference to that department with <code>&lt;department_model&gt;.employees.all()</code>. Without setting the related field you would have to do <code>&lt;department_model&gt;.employee_set.all()</code>.</p>
-<h3 id="authentication-backends">Authentication Backends <a class="heading-anchor-permalink" href="#authentication-backends">#</a></h3>
-<p>Authentication backends in Django are simply classes that implement <code>get_user</code> and <code>authenticate</code> methods given a primary key and credentials respectively. If multiple authentication backends are specified in the configuration, Django will try all available backends until a successful authentication is found</p>
-<h3 id="custom-user-models">Custom User Models <a class="heading-anchor-permalink" href="#custom-user-models">#</a></h3>
-<p>It is recommended to create a custom user model whenever you are starting a new Django project. To maintain all the built in functionality of password hashing, etc you can inherit from <code>BaseUser</code> and point <code>AUTH_USER_MODEL</code> to the custom user</p>
-<h3 id="automatic-primary-keys">Automatic Primary Keys <a class="heading-anchor-permalink" href="#automatic-primary-keys">#</a></h3>
-<p>By default Django gives every table the field <code>id = models.AutoField(primary_key=True)</code> which is an auto updating primary key</p>
-<h3 id="random-tidbits">Random Tidbits <a class="heading-anchor-permalink" href="#random-tidbits">#</a></h3>
+<h3 id="q-expressions">Q expressions <a class="heading-anchor-permalink" href="#q-expressions">#</a></h3>
 <ul>
-<li>For an app that doesn’t have a migrations directory yet, e.g. and app that is just created, you have to run <code>python manage.py makemigrations &lt;app_name&gt;</code></li>
+<li>To do more complex filtering (with and or or) you can use Q expressions
+<ul>
+<li>| indicats an or, &amp; an and</li>
 </ul>
-<h3 id="meta-classes">Meta Classes <a class="heading-anchor-permalink" href="#meta-classes">#</a></h3>
-<h5 id="models">Models <a class="heading-anchor-permalink" href="#models">#</a></h5>
-<p>Meta classes in models represent anything that is not a field, e.g. ordering, column names, etc.</p>
-<h3 id="model-managers">Model Managers <a class="heading-anchor-permalink" href="#model-managers">#</a></h3>
-<p>Model Managers are the most important part of the model as they retrieve instances from the database and provide the database queries. The default model manager is called <code>objects</code> and can be referenced by <code>&lt;model_name&gt;.objects</code> if not overriden</p>
-<h3 id="model-logic">Model Logic <a class="heading-anchor-permalink" href="#model-logic">#</a></h3>
-<p>It is best practice to include necessary simple custom model functions in the models. These can go with other model functions such as <code>__str__</code> and can be referenced by <code>&lt;model_Instance&gt;.&lt;method_name&gt;;</code></p>
-<h3 id="pre-defined-model-methods">Pre-defined model methods <a class="heading-anchor-permalink" href="#pre-defined-model-methods">#</a></h3>
-<p>Django provides pre-defined model methods such as <code>save()</code> and <code>delete()</code> than can be overridden in the model class by simply redefining <code>save(*args, **kwargs)</code> and <code>save(*args, **kwargs)</code>. Calling <code>super(*args, **kwargs)</code> in this methods will ensure the data still gets saved.</p>
-<p>Theses pre-defined methods are why, given an example model <code>Post</code></p>
-<pre><code>b = Post(text)
-b.save()
-</code></pre>
-<p>saves a new Post to the database. <code>save</code> will update a model if it already exists.</p>
-<p>I believe <code>Post(text)</code> provides a constructor that can also be accessed by <code>Post.objects.create(text)</code></p>
-<h2 id="querysets">Querysets <a class="heading-anchor-permalink" href="#querysets">#</a></h2>
-<p>A query set is essentially a <code>select</code> SQL statement with as many filters as desired which act as the <code>where</code> statement. Querysets come from the model’s manager and thus NOT a model instance.</p>
-<p><strong>A queryset does not actually hit the database until it is iterated through or another form of evaluation.</strong> <code>&lt;Model&gt;&lt;/Model&gt;.objects.all()</code> <strong>will not evaluate the queryset and thus will not hit the database</strong></p>
-<p>You can easily chain queryset filters together. This chaining is immutable and returns a new queryset every time</p>
+</li>
+</ul>
 
     </article>
   </div>

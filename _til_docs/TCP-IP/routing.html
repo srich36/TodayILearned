@@ -609,49 +609,49 @@
     </a>
     <nav id="menu">
       <ul>
-<li><a class="" href="index.html">index</a></li>
-<li><a class="" href="Authentication.html">Authentication</a></li>
-<li><a class="" href="DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="Databases.html">Databases</a></li>
-<li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../Authentication.html">Authentication</a></li>
+<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
+<li><a class="" href="../Databases.html">Databases</a></li>
+<li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
 <li class="heading"><span>Django</span></li>
 <ul>
-<li><a class="" href="Django/Django.html">Django</a></li>
-<li><a class="" href="Django/Migrations.html">Migrations</a></li>
-<li><a class="" href="Django/Models.html">Models</a></li>
-<li><a class="" href="Django/Querysets.html">Querysets</a></li>
+<li><a class="" href="../Django/Django.html">Django</a></li>
+<li><a class="" href="../Django/Migrations.html">Migrations</a></li>
+<li><a class="" href="../Django/Models.html">Models</a></li>
+<li><a class="" href="../Django/Querysets.html">Querysets</a></li>
 </ul>
 <li class="heading"><span>Entrepreneurship</span></li>
 <ul>
-<li><a class="" href="Entrepreneurship/Acronyms.html">Acronyms</a></li>
-<li><a class="" href="Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
-<li><a class="" href="Entrepreneurship/Business_Analysis.html">Business Analysis</a></li>
-<li><a class="" href="Entrepreneurship/Terminology.html">Terminology</a></li>
-<li><a class="" href="Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
+<li><a class="" href="../Entrepreneurship/Acronyms.html">Acronyms</a></li>
+<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Business_Analysis.html">Business Analysis</a></li>
+<li><a class="" href="../Entrepreneurship/Terminology.html">Terminology</a></li>
+<li><a class="" href="../Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
 </ul>
-<li><a class="" href="File_Sharing.html">File Sharing</a></li>
-<li><a class="active" href="Frontend.html">Frontend</a></li>
+<li><a class="" href="../File_Sharing.html">File Sharing</a></li>
+<li><a class="" href="../Frontend.html">Frontend</a></li>
 <li class="heading"><span>JavaScript</span></li>
 <ul>
-<li><a class="" href="JavaScript/Flux.html">Flux</a></li>
-<li><a class="" href="JavaScript/JavaScript.html">JavaScript</a></li>
-<li><a class="" href="JavaScript/React.html">React</a></li>
-<li><a class="" href="JavaScript/Vue.html">Vue</a></li>
+<li><a class="" href="../JavaScript/Flux.html">Flux</a></li>
+<li><a class="" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li><a class="" href="../JavaScript/React.html">React</a></li>
+<li><a class="" href="../JavaScript/Vue.html">Vue</a></li>
 </ul>
-<li><a class="" href="Python.html">Python</a></li>
+<li><a class="" href="../Python.html">Python</a></li>
 <li class="heading"><span>TCP IP</span></li>
 <ul>
-<li><a class="" href="TCP-IP/ARP-RARP.html">ARP RARP</a></li>
-<li><a class="" href="TCP-IP/ICMP.html">ICMP</a></li>
-<li><a class="" href="TCP-IP/IP_Addresses.html">IP Addresses</a></li>
-<li><a class="" href="TCP-IP/IP_Fragmentation.html">IP Fragmentation</a></li>
-<li><a class="" href="TCP-IP/IP_Subnets.html">IP Subnets</a></li>
-<li><a class="" href="TCP-IP/Network_Layers.html">Network Layers</a></li>
-<li><a class="" href="TCP-IP/TCP-IP.html">TCP IP</a></li>
-<li><a class="" href="TCP-IP/Unix_Specific.html">Unix Specific</a></li>
-<li><a class="" href="TCP-IP/routing.html">routing</a></li>
+<li><a class="" href="ARP-RARP.html">ARP RARP</a></li>
+<li><a class="" href="ICMP.html">ICMP</a></li>
+<li><a class="" href="IP_Addresses.html">IP Addresses</a></li>
+<li><a class="" href="IP_Fragmentation.html">IP Fragmentation</a></li>
+<li><a class="" href="IP_Subnets.html">IP Subnets</a></li>
+<li><a class="" href="Network_Layers.html">Network Layers</a></li>
+<li><a class="" href="TCP-IP.html">TCP IP</a></li>
+<li><a class="" href="Unix_Specific.html">Unix Specific</a></li>
+<li><a class="active" href="routing.html">routing</a></li>
 </ul>
-<li><a class="" href="docker-compose.html">docker compose</a></li>
+<li><a class="" href="../docker-compose.html">docker compose</a></li>
 </ul>
     </nav>
     <article id="main" class="content">
@@ -661,10 +661,16 @@
 
       </div>
 
-      <h4 id="color-changes">Color changes <a class="heading-anchor-permalink" href="#color-changes">#</a></h4>
-<p>Proper design frameworks have a standard color set. To theme your app you can easily darken and lighten each of the colors with darken or lighten classes. This produces colors that go together well.</p>
-<h3 id="icons">Icons <a class="heading-anchor-permalink" href="#icons">#</a></h3>
-<p>Icons always act weird in Vue, you cannot toggle their classes dynamically and they weren’t appearing when accessing by <code>wrapper.find</code> in just</p>
+      <h1 id="establishing-packet-routes">Establishing Packet Routes <a class="heading-anchor-permalink" href="#establishing-packet-routes">#</a></h1>
+<p>Historically a portion of the IP datagram can be used to record the routers a packet hits along the way in the IP headers. However, IP headers are a fixed size, and thus you can only record up to 9 IPv4 addresses in a single packet. As the internet grew, this quickly became too few to record all of the hops. Thus, <code>traceroute</code> was written to find all the hops a packet takes between destinations.</p>
+<p>Additionally, each IP datagram has a <code>TTL</code> (Time to life) field that is used to prevent packets from getting into routing loops. Traditionally this starts at 64 and is decremented at every hop. When <code>TTL</code> gets to 1, if the router cannot forward the packet to its finally destination it discards the packet and sends a timeout error with its IP address to the original packet source address.</p>
+<h1 id="traceroute">Traceroute <a class="heading-anchor-permalink" href="#traceroute">#</a></h1>
+<p><code>traceroute</code> takes advantage of this <code>TTL</code> expiration by creating packets with incrementing <code>TTL's</code>, starting at 1. Therefore, each successive packet reaches one further hop and gets the router IP address at which the <code>TTL</code> expired. So by creating and sending packets with <code>TTL's</code> of 1,2,3…,n where n is the unknown number of hops to get to the end destination (you know it reached the end destination because the destination system will send back a port unreachable error because <code>traceroute</code> picks a destination port of 30000+ which the destination system is very unlikely to have a program running on), you can map the entire route a packet takes.</p>
+<h1 id="routing">Routing <a class="heading-anchor-permalink" href="#routing">#</a></h1>
+<ul>
+<li>Routing tables define where packets should be sent based on destination addresses. For most internet packets they go through a default entry which is a router connected to the internet. The packet then goes through multiple hops in this same fashion, until the last router has a matching entry for the destination address</li>
+<li>Hosts build up routing knowledge through ICMP redirects being returned to them (and then adding the corresponding routes as shown by netstat). The rest of the routing knowledge is contained in routers</li>
+</ul>
 
     </article>
   </div>

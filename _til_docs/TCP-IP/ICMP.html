@@ -609,30 +609,49 @@
     </a>
     <nav id="menu">
       <ul>
-<li><a class="" href="README.html">README</a></li>
-<li><a class="" href="index.html">index</a></li>
-<li><a class="" href="Authentication.html">Authentication</a></li>
-<li><a class="" href="DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
-<li><a class="" href="Django.html">Django</a></li>
+<li><a class="" href="../index.html">index</a></li>
+<li><a class="" href="../Authentication.html">Authentication</a></li>
+<li><a class="" href="../DNS_Config.html">DNS Config</a></li>
+<li><a class="" href="../Databases.html">Databases</a></li>
+<li><a class="" href="../Distributed_Systems.html">Distributed Systems</a></li>
+<li class="heading"><span>Django</span></li>
+<ul>
+<li><a class="" href="../Django/Django.html">Django</a></li>
+<li><a class="" href="../Django/Migrations.html">Migrations</a></li>
+<li><a class="" href="../Django/Models.html">Models</a></li>
+<li><a class="" href="../Django/Querysets.html">Querysets</a></li>
+</ul>
 <li class="heading"><span>Entrepreneurship</span></li>
 <ul>
-<li><a class="" href="Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Acronyms.html">Acronyms</a></li>
+<li><a class="" href="../Entrepreneurship/Aquired_Episodes.html">Aquired Episodes</a></li>
+<li><a class="" href="../Entrepreneurship/Business_Analysis.html">Business Analysis</a></li>
+<li><a class="" href="../Entrepreneurship/Terminology.html">Terminology</a></li>
+<li><a class="" href="../Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
 </ul>
-<li><a class="" href="Frontend.html">Frontend</a></li>
-<li><a class="" href="JavaScript.html">JavaScript</a></li>
-<li><a class="" href="Python.html">Python</a></li>
+<li><a class="" href="../File_Sharing.html">File Sharing</a></li>
+<li><a class="" href="../Frontend.html">Frontend</a></li>
+<li class="heading"><span>JavaScript</span></li>
+<ul>
+<li><a class="" href="../JavaScript/Flux.html">Flux</a></li>
+<li><a class="" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li><a class="" href="../JavaScript/React.html">React</a></li>
+<li><a class="" href="../JavaScript/Vue.html">Vue</a></li>
+</ul>
+<li><a class="" href="../Python.html">Python</a></li>
 <li class="heading"><span>TCP IP</span></li>
 <ul>
-<li><a class="" href="TCP-IP/ARP-RARP.html">ARP RARP</a></li>
-<li><a class="" href="TCP-IP/IP_Addresses.html">IP Addresses</a></li>
-<li><a class="" href="TCP-IP/IP_Subnets.html">IP Subnets</a></li>
-<li><a class="" href="TCP-IP/Network_Layers.html">Network Layers</a></li>
-<li><a class="" href="TCP-IP/TCP-IP.html">TCP IP</a></li>
-<li><a class="" href="TCP-IP/Unix_Specific.html">Unix Specific</a></li>
+<li><a class="" href="ARP-RARP.html">ARP RARP</a></li>
+<li><a class="active" href="ICMP.html">ICMP</a></li>
+<li><a class="" href="IP_Addresses.html">IP Addresses</a></li>
+<li><a class="" href="IP_Fragmentation.html">IP Fragmentation</a></li>
+<li><a class="" href="IP_Subnets.html">IP Subnets</a></li>
+<li><a class="" href="Network_Layers.html">Network Layers</a></li>
+<li><a class="" href="TCP-IP.html">TCP IP</a></li>
+<li><a class="" href="Unix_Specific.html">Unix Specific</a></li>
+<li><a class="" href="routing.html">routing</a></li>
 </ul>
-<li><a class="active" href="Vue.html">Vue</a></li>
-<li><a class="" href="docker-compose.html">docker compose</a></li>
+<li><a class="" href="../docker-compose.html">docker compose</a></li>
 </ul>
     </nav>
     <article id="main" class="content">
@@ -642,21 +661,9 @@
 
       </div>
 
-      <h3 id="vue-tidbits">Vue Tidbits <a class="heading-anchor-permalink" href="#vue-tidbits">#</a></h3>
-<p>Vue supports passing invoked methods into event handlers like <code>@click=myFunc(myVal)</code> because <code>myFunc</code> is not actually being executed until the click event is registered.</p>
-<ul>
-<li>Vue does not bubble up events through multiple layers of parent components. For native events you can listen to the native browser event (which will bubble) with <code>@&lt;event&gt;.native</code></li>
-</ul>
-<h2 id="vue-material-design-frameworks">Vue Material Design Frameworks <a class="heading-anchor-permalink" href="#vue-material-design-frameworks">#</a></h2>
-<p>After much chagrin messing around with <code>flexbox</code> and UI/UX design over the past however many months I have finally decided to use a design framework - it is vastly superior to anything I could come up with.</p>
-<h3 id="vuetify">Vuetify <a class="heading-anchor-permalink" href="#vuetify">#</a></h3>
-<p>More complex, great documentation, and more of a sacrifice in control over your app. E.g. using <code>&lt;v-col col=8 lg=12&gt;</code> instead of <code>&lt;div class=&quot;col col-lg-8&quot;&gt;</code>. However, much of the bootstrap API is implemented. Beautiful UI components available. Probably going to use <code>Vuetify</code> in the future.</p>
-<h4 id="vue-material">Vue Material <a class="heading-anchor-permalink" href="#vue-material">#</a></h4>
-<p>Relatively simple component framework for <code>google material design</code>. Implements much of the <code>boostrap</code> display, margin, and padding classes. Easy to use but lacks somewhat in configuration.</p>
-<h3 id="testing-with-vuetify">Testing with Vuetify <a class="heading-anchor-permalink" href="#testing-with-vuetify">#</a></h3>
-<p>You can access <code>Vuetify</code> components specifically with <code>wrapper.find({name: &lt;ComponentName&gt;})</code> but this seems to not work sometimes. It may be a much better practice to just put a <code>.v-&lt;component&gt;-test</code> class on the <code>Vuetify component</code> for matching</p>
-<p>After trying it out this is a <strong>much</strong> better approach</p>
-<p>Test for CI/CD!</p>
+      <h1 id="icmp-(internet-control-message-protocol)">ICMP (Internet Control Message Protocol) <a class="heading-anchor-permalink" href="#icmp-(internet-control-message-protocol)">#</a></h1>
+<p>ICMP provides a protocol for systems to pass messages between one another using IP, even avoiding the TCP/UDP transport layer. <code>ping</code> uses ICMP echo request and response messages to check connectivity between systems without the transport layer.</p>
+<p>The ping server - what replies with ICMP echo responses - is usually implemented within the kernel.</p>
 
     </article>
   </div>

@@ -612,7 +612,7 @@
 <li><a class="" href="index.html">index</a></li>
 <li><a class="" href="Authentication.html">Authentication</a></li>
 <li><a class="" href="DNS_Config.html">DNS Config</a></li>
-<li><a class="" href="Databases.html">Databases</a></li>
+<li><a class="active" href="Databases.html">Databases</a></li>
 <li><a class="" href="Distributed_Systems.html">Distributed Systems</a></li>
 <li class="heading"><span>Django</span></li>
 <ul>
@@ -630,7 +630,7 @@
 <li><a class="" href="Entrepreneurship/Venture_Capital.html">Venture Capital</a></li>
 </ul>
 <li><a class="" href="File_Sharing.html">File Sharing</a></li>
-<li><a class="active" href="Frontend.html">Frontend</a></li>
+<li><a class="" href="Frontend.html">Frontend</a></li>
 <li class="heading"><span>JavaScript</span></li>
 <ul>
 <li><a class="" href="JavaScript/Flux.html">Flux</a></li>
@@ -661,10 +661,19 @@
 
       </div>
 
-      <h4 id="color-changes">Color changes <a class="heading-anchor-permalink" href="#color-changes">#</a></h4>
-<p>Proper design frameworks have a standard color set. To theme your app you can easily darken and lighten each of the colors with darken or lighten classes. This produces colors that go together well.</p>
-<h3 id="icons">Icons <a class="heading-anchor-permalink" href="#icons">#</a></h3>
-<p>Icons always act weird in Vue, you cannot toggle their classes dynamically and they weren’t appearing when accessing by <code>wrapper.find</code> in just</p>
+      <h2 id="transactional-ddl">Transactional DDL <a class="heading-anchor-permalink" href="#transactional-ddl">#</a></h2>
+<ul>
+<li>DDL (Database Design Language), e.g. <code>SQL</code></li>
+<li>Transactional DDL is a paradigm where all database operations occur in a transaction
+<ul>
+<li>They are treated as a single, coherent operation</li>
+<li>They either all go through or none at all</li>
+<li><code>Postgres</code> and <code>SQLite</code> supports transactional DDL but <code>MySQL</code> does not</li>
+<li>This is a super important concept - non-transactional DDL can leave your database in an inconsistent state if not everything goes through</li>
+</ul>
+</li>
+<li>Statements that occur in a transaction block can be rolled back</li>
+</ul>
 
     </article>
   </div>
