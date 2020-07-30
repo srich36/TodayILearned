@@ -1,6 +1,5 @@
 # Django Basics
 
-
 ### Authentication Backends
 
 Authentication backends in Django are simply classes that implement `get_user` and `authenticate` methods given a primary key and credentials respectively. If multiple authentication backends are specified in the configuration, Django will try all available backends until a successful authentication is found
@@ -57,15 +56,17 @@ You can easily chain queryset filters together. This chaining is immutable and r
 ## General Tips
 
 - It may be best to avoid signals since they are hard to track down and hard to debug
-- Go "top to bottom" with urls 
+- Go "top to bottom" with urls
   - e.g. plans/\<plan_number\>/approvals to get all the approvals for a plan
 - To add a `unique=True` field to tables with rows:
   1. Create migration to add a field without `unique=True`
   2. Create migration to populate existing fields with UUIDs
   3. Alter field to include unique option
-    - This is necessary because the initial field value will only be evaluated once when applied to all of the rows, thus it will fail the duplication constraint
+  - This is necessary because the initial field value will only be evaluated once when applied to all of the rows, thus it will fail the duplication constraint
 - `safe=False` is required in a `JsonResponse` whenever the object you are trying to serialize is not a dictionary
   - `DRF` returns a dictionary type called a `ReturnDict`
 - If you are ever getting import errors when you shouldn't be, there might be a circular dependency
   - You can't have a model depend on an external file, then have that external file depend on the model
 - When you are serializing an array of items with `DRF` you need the flag `many=True`
+- In one to many relationships the foreign key is on the one side
+- For rich text fields (`HTML` editing, bullets, strike-throughs, etc.) you can use `Django-ckeditor`
