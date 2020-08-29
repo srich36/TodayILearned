@@ -692,7 +692,7 @@
 </ul>
     </nav>
     <article id="main" class="content">
-      <h1 id="page-title" class="page-header">Default</h1>
+      <h1 id="page-title" class="page-header"></h1>
       <div class="search-label-block">
         <label class="mdb-main-label active search-articles-label">Search Articles</label>
         <a onclick="linkToRandomPage()" class="shuffle-page">
@@ -866,10 +866,19 @@
     //Strip trailing / if there is one
     page = page.replace(/\/+$/, "");
 
+    //Strip trailing .html
+    page = page.replace(".html", "")
+
+    /*Replaces underscores with spaces. You could do all this stuff much simpler/in one
+      or two lines but speed/clean code is not a concern here so there is no need.
+      Yes, I am looking at you person who is judging my Github.
+    */
     page = page.replace(/_/g, ' ')
 
-    //Get only the last part of the url
+
+
     let title = page.substring(page.lastIndexOf('/') + 1)
+    title = title.substring(0, 1).toUpperCase().concat(title.substring(1))
     title = title || "Home"
     headerEl.textContent = title
   </script>
