@@ -51,6 +51,8 @@ A query set is essentially a `select` SQL statement with as many filters as desi
 
 **A queryset does not actually hit the database until it is iterated through or another form of evaluation.** `<Model></Model>.objects.all()` **will not evaluate the queryset and thus will not hit the database**
 
+- Printing a queryset will evaluate it
+
 You can easily chain queryset filters together. This chaining is immutable and returns a new queryset every time
 
 ## General Tips
@@ -70,3 +72,5 @@ You can easily chain queryset filters together. This chaining is immutable and r
 - When you are serializing an array of items with `DRF` you need the flag `many=True`
 - In one to many relationships the foreign key is on the one side
 - For rich text fields (`HTML` editing, bullets, strike-throughs, etc.) you can use `Django-ckeditor`
+- Comparing two objects with `==` just compares the two PK's behind the scenes
+- Django can add backwards relations because it keeps track of the models and the corresponding relationships when models within `INSTALLED_APPS` are imported
