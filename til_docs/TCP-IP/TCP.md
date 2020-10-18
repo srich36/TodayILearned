@@ -1,14 +1,14 @@
 # Overview
 
 - TCP is a connection oriented protocol
-- Data is broken up into TCP *segments*
+- Data is broken up into TCP _segments_
 - If each segment isn't received by a certain time (and acknowledged), the segment is retransmitted
 - Segments are transmitted as IP datagrams and thus can come out of order. The receiving application then resequences
 - TCP provides flow control
   - Buffers for data, exponential backoff, etc.
 - TCP is a stream of bytes and it does not care what format the data is in (e.g. binary, ascii, etc.)
 - A `socket` is a combination of an IP address and port number
-- *window size*: The number of bytes each end of the TCP connection is willing to receive in its buffer
+- _window size_: The number of bytes each end of the TCP connection is willing to receive in its buffer
 - Data is optional -> TCP segments to establish connections, etc. send no
 - Generally, TCP delays ACK's up to 200ms to see if it can send data with it
 - You can ack multiple segments of bytes at one time
@@ -18,6 +18,7 @@
   - A receiver can ACK bytes but still not free up the bytes in the window size (because the application did not yet read them)
   - Max window size: 65535 bytes
 - Urgent mode flag set -> process this data directly (e.g. keyboard interrupt)
+- TCP generates an immediate ACK indicating the last received byte of data + 1 when data arrives out of order
 
 ##### TCP Header
 
@@ -54,13 +55,13 @@ This is the "three-way handshake"
 - Clients typically use ephemeral ports. Servers use well-known ports
 - Generally, whenever a new TCP request comes in to a server, it will fork the process to establish the new connection
   - The server can have many processes listening on the same well-known port number as long as the client process is different
-  - There will always be a process listening for requests (see netstat LISTEN state values with * as foreign address as it awaits new connections)
+  - There will always be a process listening for requests (see netstat LISTEN state values with \* as foreign address as it awaits new connections)
   - **TCP demultiplexes incoming requests (sends them to the right place) by the four defining values: source IP address, source port, destination IP address, destination port**
 
 ### Retransmissions
 
 - Packets are exponentially backed off when retransmitting due to packet lost/timeouts
-  - This is handled by a TCP timer 
+  - This is handled by a TCP timer
 
 ### Resets
 
@@ -81,7 +82,6 @@ This is the "three-way handshake"
 - Interactive data is stuff sent over remote shells, etc.
   - Each keystroke generally generates a data packet
 
-
 ## Congestion Window
 
 - This is a slow start algorithm as to not overwhelm the network (start at one segment, slowly build up)
@@ -92,8 +92,14 @@ This is the "three-way handshake"
 
 - Can occur when data arrives from a fast medium and piles up at a slower pipe
 - Because of how the congestion window works (only send out a new segment when an ACK is received when the application is at steady-state), data will flow at the rate of the lowest path speed between two entities
-- For the fastest transfer possible we want to keep the pipe full (max utilization, packets always being ACKed and new packets sent) 
+- For the fastest transfer possible we want to keep the pipe full (max utilization, packets always being ACKed and new packets sent)
 
+#### Congestion Avoidance
+
+- 2 signs: timeout, and receipt of 3 duplicate ACKs
+- Exponential backoff with congestion window size - the sender only sends up to the minimum of the congestion window size (sender variable `cwnd` and the receiver's advertised window)
+  - Halved every timeout
+  - Increased very gradually on successful transmissions
 
 ## Speed Limitations
 
@@ -102,3 +108,14 @@ This is the "three-way handshake"
     - Delay in moving data long distances, latencies in transmission equipment
   - 2. Interface/Media bandwidth/data transmission limits:
     - e.g. 9600 bytes/s vs a gigabit per second connection
+
+## Timeout and Retransmission
+
+- There are multiple timers TCP keeps track of, including a retransmission, and keepalive timer
+- The retransmission timer grows exponentially (generally doubled) with each retransmission
+  - This is exponential backoff
+- TCP essentially uses round trip time (RTT) standard deviation and averages to set the initial timeout time
+
+#### Fast Recovery
+
+- If the sender receives 3 ACK's for the same sequence number (saying the receiver expects that sequence number next), retransmit that sequence even before the retransmission to recover quickly
