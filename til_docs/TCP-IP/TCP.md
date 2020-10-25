@@ -19,6 +19,16 @@
   - Max window size: 65535 bytes
 - Urgent mode flag set -> process this data directly (e.g. keyboard interrupt)
 - TCP generates an immediate ACK indicating the last received byte of data + 1 when data arrives out of order
+- When speeds get up in the gigabit range the constraint is latency - getting from one host to another - rather than the rate at which an interface can send data
+- When a server is listening on `0.0.0.0` this means that it is listening on **ALL INTERFACES** that the machine has for receiving packets
+- Remote login protocols (ssh, etc.) use TCP
+  - Everything typed by the user is sent to the server, and everything sent from the server to the client is displayed on the terminal
+- CR/LF newlines
+    - Carriage Return/Line Feed (\r\n)
+- In remote connections everything the user type has to be echoed for it to appear
+- When adding features to protocols they are normally added in a backwards-compatible manner
+  - The client and the server do option negotiation to find out which options (e.g. additional commands) both support
+- HTTP requests operate over TCP
 
 ##### TCP Header
 
@@ -116,6 +126,37 @@ This is the "three-way handshake"
   - This is exponential backoff
 - TCP essentially uses round trip time (RTT) standard deviation and averages to set the initial timeout time
 
+#### Persist Timer
+
+- The sender keeps a persist timer to continually query the receiver for the window size (in case ACKs advertising the window size are lost)
+  - Only runs/is initialized when the window size is 0
+    - TCP never stops sending these but does use exponential backoff with a limit of 60 seconds
+
+#### Keepalive Timer
+
+- Probes from the server to client to see if the client is still up
+- The timer sets when probes are sent - it is reset on responses to data and responses to keepalive probes
+- 10 probes are sent - if none are answered the connection times out
+
 #### Fast Recovery
 
 - If the sender receives 3 ACK's for the same sequence number (saying the receiver expects that sequence number next), retransmit that sequence even before the retransmission to recover quickly
+
+## Path MTU Discovery
+
+- The path MTU (maximum transmission unit) is the smallest size segment that can be sent without fragmenting from one host to another
+- This is discovered by setting the DF (don't fragment) bit in the IP header
+
+
+## FTP
+
+- Protocol from copying a file from one host to another
+- Files can be transferred as a stream of bytes (which is the default) or as a set of ASCII characters
+  - "ASCII Mode" is just the ftp client converting the file bytes to a common NVT ASCII representation. At the end of the day what still gets sent is 0 and 1's, ASCII mode just represents the 0's and 1's in a common format that works between any host
+  - I believe Unix systems transfer all files as just streams of bytes
+    - End of file (EOF) is determined by closing the connection
+- It is sent as a contiguous stream of bytes
+- Uses telnet (insecure) (sftp probably uses ssh)
+- Uses 2 TCP connections
+  - Control connection to orchestrate the transfer
+  - Data connection to send the bytes

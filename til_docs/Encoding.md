@@ -45,6 +45,10 @@ Note:
 - This is necessary when you are transmitting data over mediums that only can deal with printable characters
 - `Base64` ensures that the data remains intact throughout transport
 - When data is transported, you cannot be sure that it will be interpreted correctly on the other end. `Base64` encoding gives a standard for properly ensuring all data is received and not incorrectly handled since all the transported text is ASCII.
+- 3 consecutive bytes (24 bits) are encoded as 4 6-bit values (24 bits)
+  - This is why base64 is 4/3 times longer than a normal string
+  - Each six bit value then corresponds to an ASCII character
+  - This is literally all base64 encoding is
 - Primarily used for systems that can only handle ASCII characters and just ensures it won't get corrupted
 - Sending data as UTF-8 may corrupt it on the target system. That is why `Base64` is used
 
