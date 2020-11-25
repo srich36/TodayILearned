@@ -29,6 +29,7 @@
 - When adding features to protocols they are normally added in a backwards-compatible manner
   - The client and the server do option negotiation to find out which options (e.g. additional commands) both support
 - HTTP requests operate over TCP
+- `tcpdump` works by putting the network interface card in promiscuous mode so it captures every packet
 
 ##### TCP Header
 
@@ -160,3 +161,27 @@ This is the "three-way handshake"
 - Uses 2 TCP connections
   - Control connection to orchestrate the transfer
   - Data connection to send the bytes
+
+## RPC (Remote Procedure Call)
+
+- In an RPC the client essentially calls a function on the server
+- This is done by a stub method on the client taking the "call" and packaging the parameters in a TCP/UDP request to the server which the server then processes with its own stub receiving method
+- This allows different hosts running different systems to communicate with one another if they both understand the RPC protocol
+
+## NFS
+
+- Client-server file access (different from ftp which is file transfer)
+- Operates with *file handles* the reference to a file or directory on the server
+- The server's filesystem must first be mounted
+
+## X Window System
+
+- Client-server application allowing multiple clients to use the bitmapped display
+- Server manages the display, keyboard, and mouse
+- Client and server are on the same host most of the time
+- One client is usually a window manager
+- The server is what allows access to the displays/input devices
+- "Think of the server as the end providing the service"
+- May use TCP (generally for when the client and server are on different hosts ) or Unix domain sockets (to use Unix domain protocols instead of TCP if on the same host)
+  - e.g. `/tmp/.X11-unix/X`
+- The client sends requests (e.g. create a window) and the server sends back events (mouse button pressed, window resized, keyboard pressed, etc)

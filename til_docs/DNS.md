@@ -16,6 +16,7 @@ Recall, when you purchase a domain you purchase a top level domain (TLD) which i
 - By default, Linux systems will look for a name server running on port 53 (for Ubuntu this is a systemd stub) and which contains info for actual nameservers.
   - See `/etc/resolv.conf`
 - Root servers are not used to recursively query (only to retrieve info of other authoritative nameservers). These other authoritative nameservers can then recursively query.
+- Can run `domainname` or `hostname -d` to see the domain name of your local system
 
 ## Example
 
@@ -25,7 +26,7 @@ Recall, when you purchase a domain you purchase a top level domain (TLD) which i
   - 3. Ask the `.com` nameservers for the IP address of `test.com`
   - 4. Ask the `test.com` nameserver for the IP address
 - Credit to [Julia evans](https://jvns.ca/blog/how-updating-dns-works/)
-- 
+-
 
 ## Pointer Queries
 

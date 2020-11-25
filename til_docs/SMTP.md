@@ -11,6 +11,12 @@
   - e.g. can run `host google.com` and some mail servers will be listed
     - `host -a google.com` will print out preference values for each alternate mail server
     - Mx records with the lowest preference value are tried first
+- If your server has a domain name of mydomain.com, each user will have a mailbox of user@mydomain.com
+  - (all system users don't necessarily have a mailbox but can be added to)
+  - The mailbox will be in the `/var/mail/<user>` directory
+  - You need to install an MTA to send mail locally
+    - Can see this by trying to run `mail --debug-level=2 <recipient>`
+    - It will try to send mail from `<user>@hostname.com`
 
 ## Email Parts
 
@@ -63,3 +69,4 @@
 - You see these headers describing HTTP request bodies as well
 - MIME allows for arbitrary binary data to be exchanged
 - MIME has now become a generic way of describing the structure of a document, file, or assortment of bytes. Thus it is used in HTTP requests
+  - Though they are sometimes referred to as _media types_ within the web

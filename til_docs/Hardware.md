@@ -6,6 +6,11 @@
 - Different chips communicate with each other through a bus, which provides signals to every board
   - This bus also provides power to the different chips
     - E.g. PCI is a type of bus
+- EEPROM
+  - ROM - Read only memory
+  - PROM - Programmable read only memory (only programmable once)
+  - EPROM - Erasable programmable read only memory (erase with UV light)
+  - EEPROM - Electrically Erasable read only memory (erase with software)
 
 ## RAM
 
