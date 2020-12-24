@@ -7,6 +7,7 @@
 - Interrupts allow the OS to respond asynchronously to events
 - Modern OS's may not respond immediately depending on interrupt priority
   - 2 interrupt lines: one for critical code and one that can be turned off when the CPU is executing important instructions
+- The system clock is updated at every interrupt
 
 ## How Interrupts Work
 
