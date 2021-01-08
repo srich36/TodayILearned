@@ -1,3 +1,10 @@
+## General
+
+- View: A set of SQL instructions that comprise a table set. Every time a view is queried the underlying SQL that comprises the view is run to retrieve the query
+- Materialized view: A database view that consists of all of the data already loaded - you do not need to run the queries defining the view to return the data
+- Window functions: Operate on a set of rows (like a group by) but **does not** squash the results to one aggregated rows
+
+
 ## Transactional DDL
 
 - DDL (Database Design Language), e.g. `SQL`
