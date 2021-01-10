@@ -1,6 +1,23 @@
 # CMU Database Talks
 
 
+### Rockset - Real-time indexing
+
+- Data processing engine for analytical workloads **but** with thousands of QPS (queries per second)
+- Data comes in as a stream, is processed and stored, then applications can query/aggregate the data
+- This architecture is pretty common and is called *Aggregator Leaf Trailer*
+  - The trailer is at the data ingest point, as it takes streams of data and converts them to something rockset understands
+  - This data is then stored in leafs
+  - Aggregators then operate on the leafs to retrieve data
+  - **This workload separates the writes and the reads and allows you to scale rights, reads, and storage seprately -> separation of storage and compute**
+    - This is CQRS (Command Query Responsibility Segregation)
+- Rockset indexes everything (row, column, and inverted)
+  - This is what Rockset calls *converged indexing* -> build indexes on all columns so users don't have to manage indexes
+- Stores everything in row and column based layouts and uses RocksDB as a data store
+- Uses s3 for leaf storage
+- **The design philosophy to reduce latency is to spread complex queries across as many machines as possible**
+  - 100 machines working for 1 minute vs. 1 machine working for 100
+  - This is the fundamental tradeoff in prioritizing reducing latency in favor of optimizing throughput
 ### Finding Logic Bugs - SQLancer
 
 - Initial approach:
