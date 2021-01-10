@@ -1,6 +1,6 @@
 # Today I Learned (TIL) Documentation
 
-This repository houses a small suite of tools for the continuos development and deployment of new today I learned notes to my personal notes website - www.seanrichtil.com.
+This repository houses a small suite of tools for the continuous development and deployment of new today I learned notes to my personal notes website - www.seanrichtil.com.
 
 This repository handles the pipeline converting from markdown to HTML, deploying the static content, and sending invalidation requests to the CDN server upon content updating.
 
