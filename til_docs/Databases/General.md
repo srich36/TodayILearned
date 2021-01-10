@@ -13,8 +13,18 @@
 - *Document Sharding* -> Sharded by document, not term. Thus, each document will be shared on different machines. This allows for the use of multiple CPU cores to process a query. Allows for lower latency, but comes at the cost of lower throughput
   - Elasticsearch uses document sharding, as does Rockset, but it is less common
 - Traditional sharding shards by term -> each document corresponding to a term will live on a single node (optimizing for throughput)
+- *Correlated Subquery* - Where data in a subquery references a value from an outer scope
 
+## Sharding
 
+- Sharding is a more general form of *database partitioning* which is splitting up your data into multiple tables/databases
+  - Sharding is just horizontal partitioning 
+- In sharding, you replicate the schema across multiple databases, and have some logic or identifier to determine which server
+  to look for the data at. This identifier is called a *shard key*
+  - One common way to shard is based on the alphabet (e.g. A-G key 1, etc. ), hash the user id (if you're searching for a user, etc.)
+- If sending a query for a column that the data is *not* sharded on, the query will be sent to all nodes and the results will be combined
+- In distributed SQL databases the data needs to be partitioned across nodes automatically
+  - This is transparent to the user
 
 ## Column vs. Row Storage
 

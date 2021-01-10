@@ -1,6 +1,5 @@
 # CMU Database Talks
 
-
 ### Rockset - Real-time indexing
 
 - Data processing engine for analytical workloads **but** with thousands of QPS (queries per second)
@@ -59,6 +58,15 @@
 - Asynchronous communication:
   - Messages are placed into a queue which gets processed by the cluster command processor. The response is then put back onto a response queue.
     - Each customer subscribes to their own queue, then there is also a shared queue for all customers
+
+
+### Vitess (Distributed MySQL)
+
+- Written in Go (Slack uses, Youtube, Square, etc.)
+- Architecture: Load balance into something called a "VTGate" which then analyzes the query and determines where to route the query to (which shards) and will combine the results if necessary
+- Each shard has sharding information stored in a "VSchema", which the "VTGate" then uses to determine the routing logic for the query
+  - If results need to be combined from queries at individual shards, that is done at the VTGate level
+- Vitess can massage queries because it converts a SQL query to an AST, modifies the AST to break it up into multiple queries if necessary (if sending it to multiple shards), then re-builds SQL from the modified AST
 
 ### Automatic Regression Detection and Analysis
 
