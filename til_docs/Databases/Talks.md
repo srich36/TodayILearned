@@ -79,3 +79,9 @@
   - 3. Regression Validation. Put randomly generated queries through a list of heuristics to ensure they are "normal" queries, the system has enough memory, etc.
 - Once a regression is detected the SQL minimizer attempts to extract the portion of the query that caused the regression for a bug report
 - Uses `git bisect` to get exact version of regression cause
+
+
+### Vitesse Data - Greenplum at Speed
+
+- Multiple postgres instances chained together to look like one DB instance
+

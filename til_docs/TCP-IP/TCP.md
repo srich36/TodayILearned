@@ -30,6 +30,9 @@
   - The client and the server do option negotiation to find out which options (e.g. additional commands) both support
 - HTTP requests operate over TCP
 - `tcpdump` works by putting the network interface card in promiscuous mode so it captures every packet
+- *Unix Domain Sockets* are inter-process communication sockets for exchanging data between processes on the same host
+  - Faster than TCP, even when TCP is going to somewhere on local host, because it doesn't have to get routed
+  - Unix domain sockets are still client-server, but on the same host
 
 ##### TCP Header
 

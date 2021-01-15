@@ -86,6 +86,10 @@
 ## Swap
 - Memory - pages of a process - are swapped out of main memory to a backing store when a process is inactive and main memory is full
   - Swapping leads to lower throughput as there is less memory available than is necessary
+- Linux can use a swap file or a swap partition
+  - Swap file: Just a normal large file in the OS
+  - A swap partition is more performant because it uses raw IO
+- The swap space is broken down into 4kb page-slots to hold swapped pages
 
 ## Program Structure
 
@@ -110,7 +114,7 @@
 
 ## Page Replacement
 
-- When a process needs a page from demand paging but memory is full, it uses a page replacement algorithm to bring the new page in memory
+
   - This is in favor of swapping **entire** processes (which aren't really used anymore, just pages are swapped)
   - The page being swapped out's contents are written to swap memory to free up the frame
 

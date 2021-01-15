@@ -14,6 +14,11 @@
   - Elasticsearch uses document sharding, as does Rockset, but it is less common
 - Traditional sharding shards by term -> each document corresponding to a term will live on a single node (optimizing for throughput)
 - *Correlated Subquery* - Where data in a subquery references a value from an outer scope
+- `JDBC` - Java Database Connectivity: a java API that allows you to connect to a database, issue commands, etc.
+  - Handles Java applications connecting to a database
+  - Flow is: Application code -> JDBC -> Database specific JDBC drivers -> Databases
+    - You need a JDBC driver for a given database for a Java program to interact with it
+- Postgres is not threaded, it just spawns new processes
 
 ## Sharding
 
@@ -49,3 +54,17 @@
   - `Postgres` and `SQLite` supports transactional DDL but `MySQL` does not
   - This is a super important concept - non-transactional DDL can leave your database in an inconsistent state if not everything goes through
 - Statements that occur in a transaction block can be rolled back
+
+
+## JIT (Just in Time) Compilation
+
+- Turning an interpreted program into a native one at runtime 
+  - In databases, instead of having general purpose code to evaluate a predicate, can generate a function specific to that expression (e.g. `return val=3`, etc. to run natively by the CPU and gain performance improvements)
+- Many databases (like Postgres) have support for doing this with `LLVM`
+
+## Vectorized Processing 
+
+- Primarily benefits OLAP queries as it requires a columnar format
+- Essentially operate on a column as a vector, rather than a bunch of tuples (rows)
+  - The vector becomes the primary unit in the query planner (each vector generally represents one column)
+  - Vectors/blocks get passed to query nodes instead of tuples like in row stores

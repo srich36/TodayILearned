@@ -13,6 +13,7 @@
 - RAM drives - portions of RAM that are carved out as a block device and stored as a filesystem
   - `/tmp`, `/dev/ram` on linux
 - PCI Bus (Peripheral Component Interface) - A data bus connecting hardware components on a computer
+- A disk may have some *bad blocks* which are unusable. It keeps track of these *bad blocks* throughout its lifetime. Generally there are additional sectors that are logically replaced (what the OS sees) when these blocks go bad
 
 
 ## Device Connection
@@ -66,3 +67,12 @@
 - **Raw disk** Special programs can access a partition as a sequential sequence of logical blocks with *no* file system data structures -> this is raw disk (and uses raw I/O) and is used for swap space
   - Raw I/O bypasses all file system services like prefetching, filenames, directories, etc.
   - Some databases use raw IO because they can specify exactly where things are stored
+
+
+## Bootstrapping
+
+- Bootstrap program is stored in flash memory (essentially EEPROM)
+- Generally the bootstrap loader (stored in flash memory) loads in a full bootstrap program into secondary storage
+  - The bootstrap loader is grub for linux
+  - The full bootstrap program is stored at a fix memory location - the bootstrap loader instructs the hardware to load the program into memory. The full program then loads the OS
+- *MBR* (Master Boot Record) - Where bootstrap code is stored
