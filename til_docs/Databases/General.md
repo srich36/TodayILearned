@@ -1,6 +1,7 @@
 ## General
 
 - View: A set of SQL instructions that comprise a table set. Every time a view is queried the underlying SQL that comprises the view is run to retrieve the query
+  - Can see view source in dbeaver by going to table properties -> source. This is just SQL code
 - Materialized view: A database view that consists of all of the data already loaded - you do not need to run the queries defining the view to return the data
 - Window functions: Operate on a set of rows (like a group by) but **does not** squash the results to one aggregated rows
 - Inverted index: mapping of content/key/term to location on disk
@@ -19,6 +20,14 @@
   - Flow is: Application code -> JDBC -> Database specific JDBC drivers -> Databases
     - You need a JDBC driver for a given database for a Java program to interact with it
 - Postgres is not threaded, it just spawns new processes
+- A *schema* is a named collection of tables
+  - Can contain views, indexes, etc.
+- RDBMS Types
+  - *OLAP* (Online analytical processing) - low number of complex queries for business analytics (e.g.)
+  - *OLTP* (Online transactional processing) - high number of simple queries (webapps)
+  - *Online* refers to the fact that the queries execute immediately, not in batches
+- `RocksDB` - optimized for SSDs -> can be used as a storage layer
+  - is a key value store
 
 ## Sharding
 

@@ -106,6 +106,11 @@
 
 - When an interrupt occurs, the chip sends a signal to the process to save the current program counter and branch to a certain address to run a program specified by the interrupt
 - A keyboard for example is just a set of switches. When a key is pressed the switch is closed, and the keyboard hardware generates a code for the key that was pressed. 
+- maskable interrupts -> can be turned off by the CPU prior to executing important instructions
+- nonmaskable interrupt -> reserved for unrecoverable memory errors or divide by 0, etc.
+- At boot time, an OS will installs the existing devices' interrupt service routines into the interrupt vector
+- traps are *software interrupts* and are used to request kernel space execution of programs from user space applications
+- The alternative to interrupts is frequent polling which may only be better in high throughput devices
 
 ## Bandwidth
 

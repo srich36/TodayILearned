@@ -21,6 +21,13 @@
   - Databases implement algorithms more suited to their needs rather than use the general purpose OS algorithms
 - Most of the time paging is transparent to the user, but in lower level languages structuring data so it takes advantage of locality may reduce page faults
 - A controller for a USB storage device is generally given the number of bytes to transfer and a memory address for the buffer to transfer to. When the transfer is done the CPU is interrupted
+- *RAID* (Redundant arrays of independent disks) can duplicate data to protect against losing it
+  - Can also store data across disks to be read in parallel - *striping* 
+  - A *RAID* level defines the consistency/performance level
+  - These *RAID* algorithms can be implemented at the hardware *or* software level
+- **inode** - a data structure for storing file system metadata
+- A *motherboard* is a PCB that connects the CPU, RAM, and other computer hardware, allowing them to talk to one another
+  - Buses are the circuits on the motherboard connecting these components
 # Memory Management Schemes
 
 - Programs must be kept in main memory to be executed
@@ -169,3 +176,12 @@
 ### Prepaging
 
 - To help reduce the initial number of page faults that come from on-demand paging you can prepage - bring multiple pages into memory at once
+
+### Object Storage
+
+- Some storage systems that are more computer than user facing don't use filesystems for storage. Instead, they provide a pool of storage, and can access, modify, store, delete, an object by only its object ID
+  - Hadoop file system (HDFS)
+  - These can scale horizontally to be petabytes in size
+  - a.k.a *Content Addressable Storage* because objects can be retrieved based on their contents
+- s3, facebook, dropbox, spotify, etc. all use object storage
+- Compute is done on the machines that actually host the data, then the results are sent over the network to other machines in the object storage cluster when data is requested

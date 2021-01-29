@@ -31,3 +31,9 @@ will result in
     computedPropName: "computedPropValue
 }
 ```
+
+## Browser APIs
+
+- `Temporal` -> coming soon to support `moment.js` like timezones
+- `Proxy` -> allows you to intercept an access to an object and perform any side effects on sets, gets, etc.
+  - Can implement request interceptors this way without the request library supporting it natively

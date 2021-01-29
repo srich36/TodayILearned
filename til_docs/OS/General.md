@@ -34,6 +34,8 @@
 - `dmesg` contains kernel logs
 - **program counter**: a CPU register indicating the main memory location of the next instruction to load and execute
   - Each process has its own program counter I think?
+- *Monotonic clock* is the number of seconds elapsed since a fixed point of time
+- *Wall clock* (e.g. `gettimeofday())` can jump due to NTP syncing
 
 ### Devices
 
