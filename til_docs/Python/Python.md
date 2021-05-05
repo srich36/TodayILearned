@@ -1,9 +1,24 @@
 # Python Basics
 
+- **Generators are fundamentally a way to interleave library code and user code, e.g. pausing in a function to be 
+returned to**
+    - For example, this could be used by a library to ensure methods 1, 2, and 3 are called in the correct order
+
 ### Meta Classes
 
-Meta Classes are classes where instances are of a class, rather than an instance of a class. Instances of meta classes can be used to define class behavior. Not a ton of languages support meta classes and the implementations differ (Python does).
-
+- Meta Classes are classes where instances are of a class, rather than an instance of a class. Instances of meta classes can be used to define class behavior. Not a ton of languages support meta classes and the implementations differ (Python does).
+- All classes are instances of `type`, the base metaclass
+- Can create a class dyanmically with `type(<name>, <bases>, <dict>)`
+- The metaclass `type` implements `__new__`, `__init__`, etc. To override the `__new__` for any
+class creation you can then create a new metaclass that inhereits from the base metaclass `type`, and override, `__new__`.
+  - **Note that here `__new__` is for class creation, whereas __new__ in a normal class if for instance creation**. That's why you have to override it in the metaclass if you want to ensure every time the user of your code (e.g. library code users) defines a new class it runs the `__new__` method
+  - You can then, in the class definition, put 
+      ```python3
+        class Foo(metaclass=<custom_metaclass>):
+             pass
+      ```
+- You can also solve these problems with simple class inheritance or class decorators, but can use the metaclasses to ensure that derived classes implement required abstract methods, etc.
+    - This is how `abc` works
 ### Keyword Arguments
 
 Python3 (and 2) supports keyword arguments e.g. `myFunc(b=2, a=1)` where the order of the parameters passed doesn't matter. The above is equivalent to `myFunc(a=1, b=2)`. You can mandate arguments be passed as keywords
@@ -54,3 +69,27 @@ Calling `printWord` will now print the word twice. You always want to include `*
 - Set: A collection that is unordered, unindexed, and unique
 - Python 3.5+ supports type hints
   - `def my_func(num: int) -> str:`
+- **Ellipses** are officially supported python3 syntax that do the same thing as `pass`
+- Any object can implement the **__call__** protocol ( obj() ) to define the behavior when surrounded with parentheses
+- **All top level syntax has these analogues**
+  - __call__, __iter__, __add__, etc.
+
+### Stub Files
+
+- `.pyi` files provide "stub" implementations for type annotations for Python files
+- mypy, pyright, etc. load these stub files over .pyi files to do autocompletion, etc. as lsp's 
+- Stub files are written in normal Python3 syntax with variables, default arguments, function bodies, etc. ommitted
+
+e.g. (ellipses are convention instead of pass)
+
+```
+x: int
+
+def my_func(a: int) -> bool: ...
+```
+
+
+### LSP's
+
+- `pyls` -> Palantir Python language server (slow on large projects)
+- `pyright` -> from Microsoft, faster on larger projects

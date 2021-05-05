@@ -28,6 +28,11 @@
 - **inode** - a data structure for storing file system metadata
 - A *motherboard* is a PCB that connects the CPU, RAM, and other computer hardware, allowing them to talk to one another
   - Buses are the circuits on the motherboard connecting these components
+- `mmap`'ed files (memory mapped files) maps a file into page(s) in memory. Reading to or writing to this file can then be treated like it is standard
+memory access. **However**, these writes still need to be written to disc (by default only written when the file is
+closed) and are not synchronous, this is why it is a bad ideato use *mmap* in databases
+
+
 # Memory Management Schemes
 
 - Programs must be kept in main memory to be executed

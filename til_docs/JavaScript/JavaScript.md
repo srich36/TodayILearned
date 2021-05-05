@@ -31,9 +31,18 @@ will result in
     computedPropName: "computedPropValue
 }
 ```
+- A `+` in front of a variable returns the numeric representation of it (e.g. `const b = +a`) (same as `const b = Number(a)`)
 
 ## Browser APIs
 
 - `Temporal` -> coming soon to support `moment.js` like timezones
 - `Proxy` -> allows you to intercept an access to an object and perform any side effects on sets, gets, etc.
   - Can implement request interceptors this way without the request library supporting it natively
+
+## Maps vs. Objects
+
+- Maps can have any key (not just strings)
+- Can iterate over keys in insertion order
+- Can easily get size of map
+- (Maps are better for dynamic keys, even though objects have historically been used as them)
+- See https://stackoverflow.com/questions/18541940/map-vs-object-in-javascript

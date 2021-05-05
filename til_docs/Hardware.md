@@ -11,6 +11,11 @@
   - PROM - Programmable read only memory (only programmable once)
   - EPROM - Erasable programmable read only memory (erase with UV light)
   - EEPROM - Electrically Erasable read only memory (erase with software)
+- See the hardware on your system with `sudo lshw`
+  - For displays only run `sudo lshw -C display`
+- See displays your graphics/video card supports with `xrandr`
+  - `HDMI` are the HDMI compatible outputs for your graphics card 
+  - `DP` are the display port compatible outputs for your graphics card
 
 ## RAM
 
@@ -168,3 +173,17 @@
 
 - Convert sound waves to bits
 - Transmitting information through light is much faster and is what is used now
+
+## Video/Monitors
+
+### Daisy Chains
+
+- Display port `Multi-Stream Transport`
+  - The source device (e.g. laptop) multiplixes multiple input video streams into one
+  - This is then sent to the branch devices (e.g. a hub or in the display itself) and is de-multiplixed into its composite streams
+  - **The combined data rate of all displays cannot exceed the limit of the one display port it is plugged into**
+- Can daisy chain multiple monitors through one cable but there is a bandwidth limit on the single
+cable on the host to the displays for handling the multiple video streams
+- Display port is the more established daisy chain medium
+- Can chain with USBC too (in alternative mode which allows video over USBC)
+- HDMI, VGA, do **not** work with daisy chain

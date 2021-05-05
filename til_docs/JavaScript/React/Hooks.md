@@ -22,6 +22,18 @@
 - Hooks can replace HOCs and render props by giving you a way to reuse stateful logic
   - Custom hooks, etc.
 
+## useRef
+
+- Can be used to create refs for the DOM
+- More than this, is a way to keep mutable values around, accessing them with the `.current` property
+of the ref
+- Returns a plain JavaScript object with the field `current` set to whatever you pass it
+    - **This always returns the same object when called, however, so the value of `current` in the ref is persisted across re-renders** (if it was a local variable, it would get updated/recreated every time the component rerendered)
+    - This is becauses refs are stored in a React Store
+    - **This is why we can use it to access DOM elements, because it, like the DOM elements, persists between renders**
+- You can manually update a ref (it's mutable) by setting `ref.current`
+- Thus, refs can be used to store "state" that does not need to re-render the component
+
 Quick demonstration of why hooks are cool:
 
 Class-based

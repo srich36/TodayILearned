@@ -7,3 +7,8 @@
 
 - Modifying ASTs and generating the source from those ASTs allow you to programmatically refactor code
     - This is how `eslint` and `prettier` automatically fix code 
+
+## JIT
+
+- The first time a set of instructions is encountered it is compiled into native machine code. This is then cached upon
+subsquent invocations
