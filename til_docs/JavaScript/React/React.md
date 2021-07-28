@@ -60,6 +60,7 @@
 - `AJAX` calls generally go in the `componentDidMount` lifecycle method
 - General: Debouncing - ensure a method will not execute until a certain amount of time since it was last called
 - When passing a component as a prop you need to instantiate it (e.g. `prop={<MyComponent/>}`) rather than just representing the component class (`prop={MyComponent}` **wrong**)
+- The component constructor gets called before `componentDidMount`. For asynchronous actions that will update state it is best to put them in this lifecycle method
 
 ### JSX
 
@@ -101,6 +102,7 @@
 - `styled-components`: A React library that lets you style the components with CSS directly in React
 - `react-loadable`: For code splitting
 - `test-renderer`: Get JSON representation of components
+- `react-helmet`: Manages the `html` document `head` tag
 
 ### Slots
 
@@ -182,3 +184,7 @@
 - `createPortal`
 - See DOM elements documentation for available `HTML` attributes
   - Almost all are the same as regular `HTML` but in camelCase
+
+## Tips
+
+- `componentWillReceiveProps` is deprecated but sometimes you may need to initially set some state whenever a component changes. You can do this using a `key` prop. `key` props in general ensure the component rerenders whenever the component changes. You can thus set an intial state value in the constructor, then only when the key changes will this value reset.

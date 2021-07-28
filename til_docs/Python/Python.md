@@ -93,3 +93,36 @@ def my_func(a: int) -> bool: ...
 
 - `pyls` -> Palantir Python language server (slow on large projects)
 - `pyright` -> from Microsoft, faster on larger projects
+=======
+- `hasattr(object, name)` checks if a given object has an attribute of `<name>`
+- Just as `self` is passed in to instance methods of classes, `cls` is passed in to class methods
+- `super(<class_name>, cls/self).<super_method>` in Python 2 is simplified to `super().<super_method>` in Python 3
+- Slicing out of bounds does **not** return an error, it will just return an empty array `[]` since slicing returns a subsequence of items
+- `callable` is a method that returns if a method is callable
+- Can access all subclasses with `<super_class>.__subclasses()`
+- `enumerate`: Loop through a list by key, value.
+    - `for section_index, section in enumerate(sections):`
+- `locals()` returns a dictionary of all the local symbols in the symbol table. You can fitler these by those not beginning with an underscore to access all the variables passed into a function, constructor, etc.
+- `<dict>.items()` returns a list of key-value tuples of a dictionary
+- `setattr` set an attribute on a class
+- `self.__dict__` returns the symbol table for a given instance of a class
+- `dir(obj)` returns a list of attributes for a given class
+- List comprehension. With list comprehension you can put the variable before the for loop. Must be wrapped in `[]`
+    - e.g. 
+    ```Python
+    [
+        val*2
+        for val in range(3)
+    ]
+    # outputs [0,2,4]
+    ```
+- Dictionary comprehension works the same way, but with key:value pairings
+    - e.g.
+    ```Python
+    {
+        index:value*2
+        for index, value in enumerate(range(3))
+    }
+    # outputs { 0: 0, 1:2, 2:4}
+    ```
+- `getattr(obj, field_name)` gets the value of `field_name` on the object

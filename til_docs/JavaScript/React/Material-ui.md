@@ -65,6 +65,7 @@ Material UI provides transition components that you wrap around the components y
 - `useTheme()`: A hook to return the theme of the stylesheet in a functional component
 - `withStyles()`: Link a stylesheet with a component using HOCs
 - `withTheme()(Component): Class-based API for providing the theme to a component as a prop
+- Can add `media queries` into with styles as a string (e.g. `@media print: {}`)
 
 #### Classes
 
@@ -131,4 +132,5 @@ e.g.
 `disableRipple` will flow from `MenuItem` -> `ListItem` -> `ButtonBase` thus disabling the ripple at `ButtonBase`
 - The `component` property of material-ui components allows you to change what the root node renders as. This is how you can integrate with something like `react-router`
   - `component` as a prop should always be passed statically, not with an arrow function directly in the prop, otherwise a new component will have to be created and rendered on every re-render, regardless of whether it changes
+- You can use `material-table` for great table components with a lot of functionality
 

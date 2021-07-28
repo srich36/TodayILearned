@@ -16,7 +16,15 @@ By default Django gives every table the field `id = models.AutoField(primary_key
 
 - For an app that doesn't have a migrations directory yet, e.g. and app that is just created, you have to run `python manage.py makemigrations <app_name>`
 
-### Meta Classes
+### Meta API
+
+- The meta API allows you to retrive model fields, their values, etc. and is really core to the Django ORM
+- You can access the api through `self._meta`on a model instance 
+
+#### Field API
+
+- For foreign key fields you have access to `.remote_field` which exposes the `.model` property to access the model the foreign class the foreign key points to 
+
 
 ##### Models
 
@@ -55,6 +63,22 @@ A query set is essentially a `select` SQL statement with as many filters as desi
 
 You can easily chain queryset filters together. This chaining is immutable and returns a new queryset every time
 
+## Admin
+
+- `list_display` - controls what is displayed on the change page for each model
+- Can inherit from `adminSite` and heavily customize your admin page
+
+## Django Rest Frameword
+
+- DRF's `Response` will allow you to pass json data into it - you don't need `json_response`
+
+
+## Testing
+
+- `setUp` is called once before every test method
+- `setUpData` is a class method called once at the beginning of a test run at the class-level
+- `reverse` returns a given url by accepting it's name and 'reversing' it to give the actual endpoint
+
 ## General Tips
 
 - It may be best to avoid signals since they are hard to track down and hard to debug
@@ -74,3 +98,9 @@ You can easily chain queryset filters together. This chaining is immutable and r
 - For rich text fields (`HTML` editing, bullets, strike-throughs, etc.) you can use `Django-ckeditor`
 - Comparing two objects with `==` just compares the two PK's behind the scenes
 - Django can add backwards relations because it keeps track of the models and the corresponding relationships when models within `INSTALLED_APPS` are imported
+- The `@classmethod` decorator transforms a method to a class method. This means it makes it receive the class as the first implicit argument
+- Django knows when to run an `Insert` vs `Update` in SQL when you run `save()` based on whether or not the primary key already exists within the database
+- `F` expressions are used to modify Django field values based on their current values - avoiding race conditions
+- Resolving circular dependencies between Foreign Keys: use a lazy relationship, e.g. models.ForeignKey(`'<app>.<model_name>'`) as a string
+- `<Model>.add_to_class(attr, value)` adds the attribute and value pair to the model class. This can be adding functions, etc.
+- To create and save an object in a single step using `<model>.objects.create(<data>)` instead of `<model>(<data>)`

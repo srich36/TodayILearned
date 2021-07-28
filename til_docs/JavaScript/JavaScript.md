@@ -31,6 +31,7 @@ will result in
     computedPropName: "computedPropValue
 }
 ```
+
 - A `+` in front of a variable returns the numeric representation of it (e.g. `const b = +a`) (same as `const b = Number(a)`)
 
 ## Browser APIs
@@ -46,3 +47,18 @@ will result in
 - Can easily get size of map
 - (Maps are better for dynamic keys, even though objects have historically been used as them)
 - See https://stackoverflow.com/questions/18541940/map-vs-object-in-javascript
+=======
+
+- When an error occurs in a catch block it bubbles up to the nearest try catch statement
+- `Promise.resolve(value)` returns a promise object that resolves with the given value
+  - Promises are guarenteed to be asynchronous. That means that an action for a settled promise will only occur when the stack has cleared and a clock tick passes
+- `unshift` mutates an array and elements to the beginning
+- Conditional variable assignment
+  - `const a = val || 100 `
+    - a will be 100 if `val` is any non-truthy value
+- To set two values at once you can do `a = b = <val>`
+
+#### Dates
+
+- when `Date(val)` is called as a function it returns the current date as a string
+- `new Date(val)` returns a `Date` object with the date of `val`
