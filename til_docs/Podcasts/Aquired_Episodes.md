@@ -46,6 +46,7 @@
 - [Superhuman](#superhuman)
 - [Against Gravity](#against-gravity)
 - [Jason Calacalanis](#jason-calacalanis)
+- [a16z](#a16z)
 
 ## Zoom
 
@@ -469,5 +470,15 @@
 ## Jason Calacalanis
 
 - **How to get the most out of networking: always invite people to dinner, pick up the check, and introduce people to one another without expecting anything out of it**
+
+[Back to top](#table-of-contents)
+
+##  a16z
+
+- "Mozilla" -> "mosaic killa" after Marc was pushed out of mosaic
+- Microsoft licensed *spyglass* tech (old mosaic code) with a percentage of reveneues but then gave it away for free since it shipped IE with windows. Ruthless
+- Microsoft licensed on a per cpu basis, not the number of times windows was actually put on a computer
+- Marc emailed ben and signed off "f*** you, Marc"
+- Marc was the only one on the Facebook board that told Zuck not to sell for a billion dollars
 
 [Back to top](#table-of-contents)
