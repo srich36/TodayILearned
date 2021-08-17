@@ -63,3 +63,9 @@ Receiver:
 
 1. `Base64` decode string into bits.
 2. Knowing which text-encoding was used (e.g. `UTF-8`) you can now process the bit string properly.
+
+## Percent Encoding (URL Encoding)
+
+- Takes unsafe url characters and encodes them with a `%` followed by the characters UTF-8 representation in hex 
+  - Since UTF-8 is 4 bytes, this means 2 hex digits
+- URLs can only be sent as ASCII
