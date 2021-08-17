@@ -15,6 +15,11 @@
     License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
     */
 
+    html {
+      --border-color: rgb(228, 230, 232);
+      scroll-behavior: smooth;
+    }
+
     h1,
     h2,
     h3,
@@ -147,6 +152,7 @@
       text-transform: lowercase;
       color: gray;
     }
+
 
     abbr[title]:hover {
       cursor: help;
@@ -592,8 +598,13 @@
       background: rgba(0, 0, 0, 0.05);
     }
 
+    .back-to-top {
+      padding-top: .5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
     .page-header {
-      border-bottom: 1px solid rgb(228, 230, 232);
+      border-bottom: 1px solid var(--border-color);
       padding-bottom: .5rem;
       font-size: 2.07692308rem;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -657,6 +668,11 @@
       </div>
 
       <!--CONTENT-->
+      <div class="back-to-top">
+        <a onclick="scrollToTop()" role="button">
+          Back To Top
+        </a>
+      </div>
     </article>
   </div>
 
@@ -747,6 +763,10 @@
       const nextIndex = currentPath === '' ? 1 : currentIndex + 1
       const nextIndexToUse = nextIndex < 0 || nextIndex >= contentsData.length ? 0 : nextIndex
       window.location.pathname = contentsData[nextIndexToUse].url
+    }
+
+    function scrollToTop() {
+      window.scrollTo(0, 0)
     }
 
     function linkToRandomPage(){
