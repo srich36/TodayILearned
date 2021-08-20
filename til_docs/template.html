@@ -637,16 +637,18 @@
 
     .twitter-follow-container > * {
       opacity: 0;
+      display: none;
     }
 
     .twitter-follow-container > iframe.twitter-follow-button-rendered {
         opacity: 0;
+        display: initial;
         /* Forwards means this element will retain opacity 1 after animation */
         animation: fadeIn 1.5s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
         -moz-animation: fadeIn 1.5s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
         -webkit-animation: fadeIn 1.5s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
-        -o-animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
-        -ms-animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+        -o-animation: fadeIn 1.5s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+        -ms-animation: fadeIn 1.5s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
     }
 
     .page-header {
