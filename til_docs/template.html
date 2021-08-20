@@ -606,6 +606,62 @@
       cursor: pointer;
     }
 
+    .twitter-follow-container {
+      margin-bottom: 1rem;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+    @-moz-keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+    @-o-keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+    @-ms-keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+    .twitter-follow-container > * {
+      opacity: 0;
+    }
+
+    .twitter-follow-container > iframe.twitter-follow-button-rendered {
+        /* Forwards means this element will retain opacity 1 after animation */
+        animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+        -moz-animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+        -webkit-animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+        -o-animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+        -ms-animation: fadeIn 2s cubic-bezier(1,.04,.4,1.03) 0s 1 normal forwards;
+    }
+
+    /* .twitter-follow-button {
+      display: hidden;
+      position: relative;
+      height: 20px;
+      box-sizing: border-box;
+      padding: 1px 8px 1px 6px;
+      background-color: #1b95e0;
+      color: #fff;
+      border-radius: 3px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 11px;
+    } */
+
     .page-header {
       border-bottom: 1px solid var(--border-color);
       padding-bottom: .5rem;
@@ -637,6 +693,8 @@
       color:black;
       font-size: 1.75rem;
       margin-left: .25rem;
+      /* Since there is weird alignment with this */
+      margin-top: -.35rem;
     }
 
   </style>
@@ -671,6 +729,13 @@
       </div>
 
       <!--CONTENT-->
+
+
+
+      <div class="twitter-follow-container">
+        <a href="https://twitter.com/SeanRich366?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @SeanRich366</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
       <div class="back-to-top">
         <a onclick="scrollToTop()" role="button">
           Back To Top
