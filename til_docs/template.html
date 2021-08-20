@@ -598,6 +598,12 @@
       background: rgba(0, 0, 0, 0.05);
     }
 
+
+    .action-container {
+      display: flex;
+      align-items: center;
+    }
+
     .back-to-top {
       padding-top: .5rem;
       border-top: 1px solid var(--border-color);
@@ -681,9 +687,8 @@
     .next-page {
       color:black;
       font-size: 1.75rem;
-      margin-left: .25rem;
+      margin-left: 1rem;
       /* Since there is weird alignment with this */
-      margin-top: -.35rem;
     }
 
   </style>
@@ -714,12 +719,14 @@
       <h1 id="page-title" class="page-header"></h1>
       <div class="search-label-block">
         <label class="mdb-main-label active search-articles-label">Search Articles</label>
-        <a onclick="linkToRandomPage()" class="shuffle-page action-icon">
-          <img src="/public/shuffle.svg" width="23" height="40" />
-        </a>
-        <a class="next-page action-icon" onClick="goToNextPage()">
-          &rarr;
-        </a>
+        <div class="action-container">
+          <a onclick="linkToRandomPage()" class="shuffle-page action-icon">
+            <img src="/public/shuffle.svg" width="23" height="40" />
+          </a>
+          <a class="next-page action-icon" onClick="goToNextPage()">
+            <img src="/public/long-arrow-right.svg" width="23" height="40"/>
+          </a>
+        </div>
       </div>
       <input id="article-search" type="text" class="w-100 search-input" placeholder="Vue..."></input>
       <div id="search-result-links">
