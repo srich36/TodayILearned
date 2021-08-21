@@ -44,6 +44,7 @@
 
     pre code {
       word-wrap: normal;
+      white-space: normal;
     }
 
     body {
@@ -139,7 +140,6 @@
     }
 
     code {
-      white-space: pre;
       font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
     }
 
@@ -728,7 +728,7 @@
           </a>
         </div>
       </div>
-      <input id="article-search" type="text" class="w-100 search-input" placeholder="Vue..."></input>
+      <input id="article-search" type="text" class="w-100 search-input" placeholder="Vue..." onclick="closeMenuIfOpen()"></input>
       <div id="search-result-links">
 
       </div>
@@ -840,6 +840,15 @@
 
     function scrollToTop() {
       window.scrollTo(0, 0)
+    }
+
+    function closeMenuIfOpen() {
+      const layout = document.getElementById('layout')
+      if(!layout.className.includes('active')) return
+
+      // Simulate closing the menu
+      const el = document.getElementById('menuLink')
+      el.click()
     }
 
     function linkToRandomPage(){
