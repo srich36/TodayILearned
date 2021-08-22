@@ -9,4 +9,4 @@ This repository handles the pipeline converting from markdown to HTML, deploying
 `yarn docs`: Generate HTML structure from markdown files in the `til_docs` directory
 `yarn serve`: Serve static HTML files locally
 
-Pushes to this repository will deploy to www.seanrichtil.com
+Pushes to this repository will deploy to www.seanrichtil.com 

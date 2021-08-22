@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "docs": "markdown-folder-to-html til_docs && cp WebsiteError.html _til_docs",
-    "serve": "serve _til_docs"
+    "docs": "markdown-folder-to-html til_docs && npm run postProcess && cp WebsiteError.html _til_docs",
+    "serve": "serve _til_docs",
+    "postProcess": "node postProcessHtml.js"
   },
   "devDependencies": {
     "markdown-folder-to-html": "^2.4.0",

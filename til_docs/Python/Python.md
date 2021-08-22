@@ -6,7 +6,7 @@ returned to**
 
 ### Meta Classes
 
-- Meta Classes are classes where instances are of a class, rather than an instance of a class. Instances of meta classes can be used to define class behavior. Not a ton of languages support meta classes and the implementations differ (Python does).
+  - Meta Classes are classes where instances are of a class, rather than an instance of a class. Instances of meta classes can be used to define class behavior. Not a ton of languages support meta classes and the implementations differ (Python does).
 - All classes are instances of `type`, the base metaclass
 - Can create a class dyanmically with `type(<name>, <bases>, <dict>)`
 - The metaclass `type` implements `__new__`, `__init__`, etc. To override the `__new__` for any
