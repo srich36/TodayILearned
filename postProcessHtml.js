@@ -67,7 +67,7 @@ const getHTMLTitle = (filePath) => {
         parent = path.dirname(parent)
     }
 
-    const titleString = stack.reverse().join(' / ')
+    const titleString = stack.reverse().join(' ')
     return `Learn Code Daily - ${titleString}`
 }
 
