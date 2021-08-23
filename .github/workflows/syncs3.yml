@@ -6,8 +6,19 @@ on:
       - master
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: lint
   deploy:
     runs-on: ubuntu-latest
+    needs: lint
     steps:
       - uses: actions/checkout@master
       - uses: borales/actions-yarn@v2.0.0
