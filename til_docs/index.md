@@ -1,9 +1,13 @@
-# Collection of Today I Learned (TIL)
+# What I've Learned
 
+Over the past few years I've consumed thousands of hours of startup, programming, and general technology content. This
+website boils down all the learnings in a simple, readable form.
 
+Are you a software engineer looking to improve your skills? Find all the programming knowledge I've learned here.
 
-This repository serves as a random collection of TIL's over a random period of days. Some of these were review and others were new concepts. Hope you enjoy!
+Interested in startups and technology? Check out the plenty of entrepreneurship topics and podcasts notes to quickly learn
+everything I have.
 
-For any suggestions, corrections, or issues, feel free to file an issue on my today I learned [github repository](https://github.com/srich36/TodayILearned/issues).
+Want more detail and more long-form thoughts? My [personal blog](https://theseanrich.com) may have what you're looking for.
 
-Like the content and want to discuss more software or business topics? Follow my new Twitter account!
+Tell me what you want to learn next on my new Twitter account. You're busy. I'll save you the time and share it with you.

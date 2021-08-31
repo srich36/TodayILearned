@@ -65,7 +65,7 @@ You can easily chain queryset filters together. This chaining is immutable and r
 
 ## Admin
 
-- `list_display` - controls what is displayed on the change page for each model
+- `list_display` controls what is displayed on the change page for each model
 - Can inherit from `adminSite` and heavily customize your admin page
 
 ## Django Rest Frameword
