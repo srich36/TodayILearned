@@ -8,6 +8,8 @@ Are you a software engineer looking to improve your skills? Find all the program
 Interested in startups and technology? Check out the plenty of entrepreneurship topics and podcasts notes to quickly learn
 everything I have.
 
-Want more detail and more long-form thoughts? My [personal blog](https://theseanrich.com) may have what you're looking for.
+Want to learn more about me? Check out my [résumé](Resume.pdf) to see what I've been up to!
 
-Tell me what you want to learn next on my new Twitter account. You're busy. I'll save you the time and share it with you.
+[//]: # ( Want more detail and more long-form thoughts? My [personal blog]&#40;https://theseanrich.com&#41; may have what you're looking for.)
+
+[//]: # ( Tell me what you want to learn next on my new Twitter account. You're busy. I'll save you the time and share it with you.)
