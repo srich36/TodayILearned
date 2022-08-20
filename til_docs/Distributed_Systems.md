@@ -1,3 +1,16 @@
+# Modeling Consistency in Distributed Systems
+
+- Whenever you need to break ties between something (e.g. merging branches of a CRDT), rendesvous hashing is a great option
+    - Rendesvous hashing gives you a priority ordering of all the objects you are considering
+        - e.g. if you have 10 servers and you want to figure out which server should health check an origin server, rendesvous hashing
+        will give you a consistent ordered list of your 10 servers ordered by priority
+- Causal consistency - You can assign a partial ordering to things (e.g. you know some events happen before others) but other events you only know happened concurrently
+    - This is the basis of an AP system with eventual consistency
+    - It is closer to how the real world works
+- "Single System Image" - hiding the fact that the system is distributed and just presenting a single system to the user
+    - This mandates linearizability 
+    - Building distributed systems with this may limit what you can do because it requires linearizable properties
+
 # Networking Architecture
 
 ### Reverse Proxy
