@@ -21,6 +21,13 @@
 - There doesn't seem to be a good way to implement optional arguments (like `kwargs` in Python)
   - The builder pattern is the best way to simulate this in Java `.builder().calories(100).sodium(35).build()`
 - Frameworks like `EasyMock` allow you to generate dynamic mocks like `MagicMock` in Python
+- The diamond operator `<>` is used to differentiate raw types from generics, and auto-infer the type based on the creation
+  - e.g. `List<String> myList = new List<>("adf", "Asd")`
+  - `new List("adf", "Asd")` would be using the *raw* List type, not the generic
+  - The *raw* type is a generic type without any specified type parameters
+- Underscores have no effect on the value of numeric literals but can make them easier to read if used with discretion
+  - e.g. `9.109_383_56e-31`
+- The `static` import utility will import everything into the current namespaces without requiring you prefix the package name
 
 ### JDK
 
