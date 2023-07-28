@@ -22,6 +22,7 @@ Steps 2 and 3 may be blurred together (in the implicit flow), but if possible it
 - Clients can request a set of `scopes` (in the initial authorization server request), which restrict permissions that the client can access (e.g. repo.read)
   - These list of scopes are then used to generate a consent screen for the user to approve and log in at the authorization server (e.g. accounts.google.com)
 - In all of the above steps, the server forces the browser to redirect by sending a 302 Found HTTP status code along with a Location header containing the URL to redirect to. This is handled automatically by the browser.
+- Many mobile apps using webviews for their logins since OAuth was originally built for web
 
 # OpenID Connect (OIDC)
 
