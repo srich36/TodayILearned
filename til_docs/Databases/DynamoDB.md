@@ -182,7 +182,33 @@ your data to analytics systems.
     - One call can be used to get all the following relationships 
     - You can then use the key in the following relationship in a `BatchGetItem` request to get details about all the people
     following (including display name, profile photo, etc.)
-    - 
+
+## Filtering
+
+- If you are always going to filter on two or more attributes you can use a composite sort key
+- Sparse indexes - DynamoDB only copies items into an index if the item has the index's primary key attributes
+    - This can be really useful when used intentionally for data modeling
+    - Providing a global filter on an item type (in an overloaded index)
+        - e.g. if you want to filter for all user's that are admins, it would be wasteful to read through all the user items
+        - Instead, you can add a special "ADMIN" attrbiute to users that are admins and use this as the GSISK1 in an overloaded index
+            - This gives you an additional item collection of all users that are admins in a given org
+    - Using sparse indexes to project a certain type of entity 
+        - If you have multiple entity types and only want to have a way to filter for a particular entity type, you can create a sparse index that only populates for items of that entity type
+            - It seems like this would be so much better to do in a data warehouse (who needs to query all items of an entity type in DynamoDB - something is wrong there)
+- Adding filter expressions directly in your queries can preven you from knowing how many items you will return with a `limit`
+    - Because of this, it's even more important you build your filtering right into your indexes so you can set a proper `limit`
+
+## Sorting
+
+- When considering your access patterns you must take sorting into account
+- You need to arrange your items with your primary keys so they are sorted in advance
+    - Your sort key will drive sorting here
+- Casing matters in text sorting -- use lowercase if you need to maintain proper sorting
+- Using unique sortable ids can help as well (KSUID, UUIDv7)
+- **You cannot update a sort-key after it is created without deleting and recreating the item**
+    - You can do this for a secondary index (what you'll want to use for an `updated_at` for example) because DynamoDB handles the deletion
+    and recreation when replicating asynchronously
+- 
 
 ## DynamoDB API
 
