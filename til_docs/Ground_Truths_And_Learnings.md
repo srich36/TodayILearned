@@ -25,3 +25,10 @@ The main way you can fracture relationships is by not being upfront with people.
 (e.g. Pink glitter card)
 - If you have bad news to give don't delay - get it out right away
 - If you are talking to someone and it looks like you lost them, pause and say something like "It looks like I lost you, do you have any questions?"
+
+## Document Structuring
+
+- People don't read walls of text -- they read bullet points
+- Put the most important block/decision at the top and don't be wishy washy
+    - Put the alternatives at the bottom
+    - The top and bottom of the document are the two most important pieces

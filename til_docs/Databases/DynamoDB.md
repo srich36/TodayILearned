@@ -249,3 +249,23 @@ your data to analytics systems.
         - These actually manipulate the item rather than writing an item
         - You can `SET`, `REMOVE`, `UPDATE`, or `DELETE` operations
         - You can operate on nested map elements with a `.` property
+
+## Migrating data models
+
+- Purely adding new attributes (for non-indexed attributes)
+    - Simple, just add the field
+- Adding a new entity type without any relations to your existing entities
+    - We can just make a new item collection for these objects
+- Adding a new entity type into an existing item collection
+    - In a single table design, you can just add a new type of item into an existing set of relationships
+    - e.g. to grab a posts and all likes you can add the like entity to the post item collection
+- Adding a new entity type that doesn't fit into an existing item collection
+    - Just add a new gsi
+    - You may need to backfill thi
+- **You can easily partition scans into parallel scans by setting the `Segment` and `TotalSegment` properties of the scan operation**
+    - When implementing the workers you'll need to handle parallelizing them
+
+## Miscellaneous Strategies
+
+- Ensuring uniqueness on two or more attributes
+    - To ensure uniqueness in dynamodb you need to build that attribute 
