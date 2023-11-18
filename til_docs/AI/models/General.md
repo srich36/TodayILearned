@@ -20,3 +20,5 @@
   - This gives each piece of training data an ability to update the model parameters
 - One limitation of this study is that GPT-4 was used as the evaluator for the benchmarks and 
 it's known to be biased towards models derived from itself
+- *Loss function* - A loss function is the mathematical function that is used to minimize the
+error between the actual and predicted outcomes
