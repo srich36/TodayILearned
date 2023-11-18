@@ -12,8 +12,19 @@
 - *Hidden layer*  - A layer of neurons that is intermediate and is not the input or the output
 - *Forward Propagation* - Input data is fed into a neural network, that is used to compute an output, and that output is optionally
 passed to more layers to compute the final output
+- *Feed Forward* - Describes the architecture of a neural network where information moves in one direction and there are no cycles
 - *Hyperparameters* - Parameters that determine the network structure and how the network is trained
   - Examples: learning rate, number of hidden layers, number of epochs, batch size, etc.
+- *Layer* - A collection of neurons that are connected to the same inputs and output
+  - In a feed forward model this is just one step of the feed forward process (inputs -> layer 1 -> layer 2 -> output)
+- *Neuron* - Represents one unit in a neural network -- it takes inputs, applies a function to them, and produces an output
+  - A perceptron is a subset type of a neuron in a neural network
+
+### Mathemtical Terms
+
+- `x` - Input vector
+- `y` - Output vector
+- `w` - Weight vector
 
 ## History
 
@@ -107,7 +118,7 @@ passed to more layers to compute the final output
     - Regularization 2: Early stopping
       - Stop training before we have a chance to overfit
       - Set some of the training data aside and use it as a validation set and use it to monitor how well the network is doing on non-training data
-      - When the loss decreases but the test loss increases on the validation set, you stop training
+      - When the loss decreases but the test loss increases on the validation set, you stop training  
 
 
 #### Loss Functions
