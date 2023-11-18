@@ -1,83 +1,62 @@
-## Sequential Modeling
+# Terminology
 
-- Sequence modeling: How we can build models that learn from sequences of data
-- What is sequential modeling?
-  - Predicting where a ball will travel next -- you need to know the previous position of the ball
-  - Predicting the next word in a sentence -- you need to know the previous words in the sentence
-  - Audio recognition, etc.
-  - Sentiment classification
-- Traditional binary classification (e.g. will I pass my class) does not require sequential modeling and can 
-be modeled with a simple feed-forward neural network
+- *Attention* - The foundational mechanism of the transformer architecture
+  - Attention is a way to identify and pay attention to what is important in a potentially sequential stream
+- *Self-Attention* - Attending to the most important parts of an input
+- *Self-Attention Head* - A single unit of attention mechanism (positional encoding, query, key, value, attention, output)
+  - Multiple attention heads are combined to extract different features
 
-## Neurons with Recurrence
+# Overview
 
-- Even if we stack layers together in a feed-forward neural network we still don't have sequential modeling
-  - We can think of this as evaluating **inputs at a certain time**
-- What if we ran this operation multiple times for each timestep?
-  - They would be independent copies of each other with different inputs at different timestamps
-  - But what if an output at a certain timestamp depended on the output of the previous timestamp?
-- **What if we linked something that is being computed at a given timestamp to the computations at a later timestamp?**
-  - This is making each timestamp computation stateful, and we call this internal state `h` (a memory term)
-  - The output of a model is thus a function of the individual inputs **and** the past state
-- So, for each execution timestamp the state `h` updated and fed back into the neurons in a recurrence relation
-  - This ensures that the state `h` is updated as time progresses
-- State doesn't just belong to the model, it belongs to individual neurons
-- The cell state is the memory of the neuron, and is calculated as a function of the weights, inputs, and previous state
-- Computing the state at a given timestamp is done by:
-  - Multiplying a set of state weights and multiplying them by the previous state
-  - Multiplying a set of input weights and multiplying them by the input
-  - Adding the two together
-  - Applying a non-linear activation function to the result
-  - **Note that the weight matrices for state updates are different than the weight matrices for input updates**
-- To generate an output at the given timestamp, we can use another weight matrix to multiply the state 
-- Thus, there are three main weight matrices in a recurrent neural network:
-  - State update weights (state -> state, `W_hh`)
-  - Input weights (input -> state, `W_xh`)
-  - Output weights (state -> output, `W_hy`)
-- Another way to picture RNNs (or compute RNNs) is to iteratively process the input sequence over time and passing the state from one timestamp to the next
-  - This is called *unrolling* the RNN
-  - This is a way to visualize the recurrence relation
-- The same weight matrices are used at each timestamp
-- RNNs can take a single input and produce many outputs, (one-to-many)
-  - For example, a single image can be used to generate a caption
-- RNNs can also take many inputs and produce a single output (many-to-one)
-  - For example, a sequence of words can be used to predict the sentiment of a sentence
-- RNNs can also take many inputs and produce many outputs (many-to-many)
-  - For example, a sequence of words can be used to generate a sequence of words
+- Transformers were created as a way to improve the performance of RNNs
+  - First read the [RNNs](../RNNs.md) page for more information
+- The goal of transformers is to remove LLN bottlenecks
+  - Process information continuously as a stream of information
+  - Parallelize the computation of the model
+  - Establish long memory dependencies
+- Language models, AlphaFold2, Vision Models, etc. all use transformers
 
-### Training RNNs
+## How Transformers Work
 
-- Defining loss
-  - A prediction at an individual timestamp gives a computed loss at that timestamp
-  - We can sum the loss across all timestamps to get the total loss
-  - **This defines the total loss to one input in an RNN**
+- What if we could eliminate the need to process information timestamp by timestamp?
+  - This would remove the need to process information sequentially
+  - This would remove the need to backpropagate through time
+- Naive approach: What if we squashed the entire sequence into a single vector?
+  - Now, we can build a feed-forward network 
+  - Downsides
+    - Does not scale (the network would need to be huge)
+    - No order/temporal dependence, no long memory
+- The key idea is to identify and *attend* to what is important in a potentially sequential stream
 
-#### Backpropagation Through Time
+## Attention
 
-- 
-
-### Sequence Modeling Design Goals
-
-- Models should
-  - Handle variable-length sequences
-  - Be trained to track and identify dependencies between inputs at different time steps
-  - Maintain information about order
-  - Share parameters across different parts of the sequence (weights should be the same across different parts of the sequence/timestamps)
-  - Handle differences in order of the sequence (e.g. the food was good, not bad vs. the food was bad, not good)
-- RNNs do meet these design criteria
-
-### Using RNNs
-
-- You first have to convert your input data in a way that the neural network to understand
-  - Neural networks are just mathematical functions -- they only understand numbers
-  - Thus, we have to convert language into numbers
-  - This is done by tokenizing the input with an embedding model
-- One way to do this is to use a one-hot encoding
-  - This is a vector of length `n` where `n` is the number of words in the vocabulary
-  - Each word is represented by a vector of length `n` where all values are 0 except for the index of the word in the vocabulary
-  - This is a sparse representation of the input
-  - No semantic information is encoded in this representation
-- Alternatively, you can learn a neural network to learn the embedding to map related words to similar vectors
-  - This is called an *embedding model*
-  - This is a dense representation of the input
-  - Semantic information is encoded in this representation
+- Attention at its core is intuitive
+- Lets use an image as an example
+  - We can identify the most important parts of an image by looking at it
+  - We can then use this information to make a decision
+- Goal:
+  - Eliminate recurrence and attend to important information
+- Steps
+  1. Identify which parts to attend to -- this is the hard problem! It's similar to a search problem
+  2. Extract the features with high attention
+- Attention with search
+  - Have some query (Q) and a set of keys (K)
+  - How similar is the query to each key?
+  - Now that we've identified the most similar keys, we can extract the values (V) associated with those keys
+    - (e.g. if this were a video search on Youtube, the keys would be the videos name and the values would be the video itself)
+- Using this in language:
+  1. Encode position information
+    - A neural network layer is used to encode positional relationships between words (this could be an embedding model)
+  2. Extract query, key, value for search
+     - A neural network layer is used to extract the query 
+     - Another layer is used to extract the key
+     - Another layer is used to extract the value
+     - These layers do not feed into each other but are computed independenlty 
+  3. Compute attention -- compute similarity score between each query and key
+     - This is just a dot product of vectors -- cosine similarity
+     - This operation gives us a score of how components of the input data are related to each other 
+     (imagine a 2D grid of the sentence with each block being a word with each box having the similarity metric)
+     - Each operation goes through a softmax function to normalize the scores between 0 and 1
+  4. Extract the values associated with the highest attention scores by using the attention weighting matrix multiplied by the value
+- This entire scheme defines one *self-attention head*
+  - Multiple heads can be used to extract different features and then can be used to form a larger neural network architecture

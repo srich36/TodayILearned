@@ -19,6 +19,10 @@ passed to more layers to compute the final output
   - In a feed forward model this is just one step of the feed forward process (inputs -> layer 1 -> layer 2 -> output)
 - *Neuron* - Represents one unit in a neural network -- it takes inputs, applies a function to them, and produces an output
   - A perceptron is a subset type of a neuron in a neural network
+- *LSTMs* - Long short-term memory -- a type of RNN that uses gated cells to remember relevant information and forget irrelevant information
+over time
+  - These are designed so long-term dependencies can be tracked and backpropagation through time can be done without vanishing gradients
+- *Fully Connected Neural Network* - A neural network where each neuron in a hidden layer is connected to every neuron in the next layer
 
 ### Mathemtical Terms
 
