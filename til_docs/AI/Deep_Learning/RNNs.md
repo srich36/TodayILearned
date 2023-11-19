@@ -99,6 +99,7 @@ be modeled with a simple feed-forward neural network
   - Neural networks are just mathematical functions -- they only understand numbers
   - Thus, we have to convert language into numbers
   - This is done by tokenizing the input with an embedding model
+    - **Embedding models compress information -- they convert arbitrary length inputs into fixed-length vectors**
 - One way to do this is to use a one-hot encoding
   - This is a vector of length `n` where `n` is the number of words in the vocabulary
   - Each word is represented by a vector of length `n` where all values are 0 except for the index of the word in the vocabulary

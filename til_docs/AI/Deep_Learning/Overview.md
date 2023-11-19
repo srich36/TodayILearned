@@ -23,6 +23,16 @@ passed to more layers to compute the final output
 over time
   - These are designed so long-term dependencies can be tracked and backpropagation through time can be done without vanishing gradients
 - *Fully Connected Neural Network* - A neural network where each neuron in a hidden layer is connected to every neuron in the next layer
+- *Dense Layer* - A layer where each neuron receives input from every neuron in the previous layer
+- *Optimizer* - An algorithm that is used to update the weights of the neural network
+  - Examples: gradient descent, stochastic gradient descent, etc. Different optimization algorithms often use gradient
+  descent as a backbone but not always
+
+## Hyperparameters
+
+- *Batch Size* - The number of training examples used before the model's parameters are updated
+  - This determines how many examples are presented to the model at once
+  - **It has no bearing on the actual model architecture -- after training you can update this to 1 and it will still work**
 
 ### Mathemtical Terms
 
@@ -53,6 +63,12 @@ over time
   - External memory
   - Computation complexity reduction
   - Alignment of models with human intent
+
+## General Notes
+
+- Models may have a different layer structure at test and inference time
+  - e.g., we may add dropout layers at training time to prevent overfitting, and remove them at inference time
+  - The weights for the actual model are the same though
 
 ## How Neural Networks Work
 
