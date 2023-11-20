@@ -40,6 +40,12 @@ over time
 - `y` - Output vector
 - `w` - Weight vector
 
+## Key Concepts
+
+- *Universal Approximation Theorem* - A neural network with a single hidden layer can approximate any *continuous* function
+  - **Neural networks are just really good function approximators**
+
+
 ## History
 
 - Neural networks, deep learning have been around for decades
@@ -63,12 +69,6 @@ over time
   - External memory
   - Computation complexity reduction
   - Alignment of models with human intent
-
-## General Notes
-
-- Models may have a different layer structure at test and inference time
-  - e.g., we may add dropout layers at training time to prevent overfitting, and remove them at inference time
-  - The weights for the actual model are the same though
 
 ## How Neural Networks Work
 
@@ -170,3 +170,37 @@ over time
 
 - Deepfakes
 - Generating a simulated environment and training things like cars/planes in a simulator
+
+## General Notes
+
+- Models may have a different layer structure at test and inference time
+  - e.g., we may add dropout layers at training time to prevent overfitting, and remove them at inference time
+  - The weights for the actual model are the same though
+- Often the output/expected result of your training data are called *labels*
+  - e.g. For a binary classifier (e.g. spam/not spam), the labels would be 0 or 1
+- *Universal Approximation Theorem* - A neural network with a single hidden layer can approximate any *continuous* function
+  - This is why neural networks are so powerful
+  - However, there are a few caveats
+    - The number of neurons in the hidden layer may be very large
+    - The resulting model may be very complex and may not generalize beyond that function
+
+## Limitations of Deep Learning Models
+
+- Modern deep networks can perfectly fit to *random data*
+  - This means that models don't necessarily generalize well beyond the training data
+    - The network is just generating a function that fits the training data -- there is no guarantee that the function
+    structure beyond the training data is meaningful
+    - It could be a *crazy* function that over the training data just happens to fit
+- The network is only as good as the training data it is given
+- Algorithmic bias
+- Computationally expensive...
+- **These are problems in research we can solve**
+- Difficult to **encode structure** and prior human knowledge during models
+
+### Neural Network Failure Modes
+
+- Mismatches between training data and real-world data 
+  - How do models behave when they encounter information they are uncertain about?
+- Small random noise to input data (e.g. images) greatly affect the output of the model
+  - Humans are robust to this, but the models may classify the image as something completely different
+  - This is an *adversarial attack* -- how can we modify input data to increase the loss?

@@ -67,6 +67,7 @@ and it will learn the latent variables used to recreate it
   - The encoder and decoder are neural networks
 - By sampling from the latent space, we can generate new data
   1. Sample from the assumed latent space distribution (gaussian because of the regularization term)
+     - **This is why we can bypass the encoder step when generating new samples -- we assume the latent space distribution**
   2. Decode the sample to get the output data
   **Note that for new sample generation we don't need the encoder step!**
 - **Once trained, the encoder step is only useful for:**
