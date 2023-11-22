@@ -11,3 +11,21 @@
   from the local neighborhood of the graph
   - Graph encoding is a new technique that can be used to datasets that naturally have a graph structure
     - e.g. Molecular discovery
+
+
+## Applications of Graph Neural Networks
+
+- Drug discovery -- discover novel antibiotics
+- Traffic prediction -- predict traffic patterns
+  - This led to significant ETA improvements in Google Maps
+- COVID-19 Forecasting
+  - This was modeled as spatio-temporal data
+
+## Learning From 3D Data
+
+- Learning from point clouds!
+  - Unordered sets of points in 3D space
+- You can extend graph neural networks to point clouds
+  - The idea is to use a graph to represent the point cloud
+    - You can dynamically construct a mesh based on the point cloud
+

@@ -25,6 +25,8 @@ The main way you can fracture relationships is by not being upfront with people.
 (e.g. Pink glitter card)
 - If you have bad news to give don't delay - get it out right away
 - If you are talking to someone and it looks like you lost them, pause and say something like "It looks like I lost you, do you have any questions?"
+- Faster is always better. Don't "circle back on something next week" -- do it now, or call them and speak to them later that day
+  - whenever you are feeling stuck just **start doing the work**
 
 ## Document Structuring
 

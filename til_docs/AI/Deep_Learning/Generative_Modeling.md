@@ -139,3 +139,10 @@ and it will learn the latent variables used to recreate it
   - Cycle GANs can be used for deep fakes
     - You can train a Cycle GAN to transform a video of a person to a different person
     - You can then use the generator to generate new frames of the video
+
+### Limitations
+
+- *Mode collapse* -- in the generative process all the new samples generated are similar to each other
+- Generating out of the training data
+- **These are hard to train** (GANs and VAEs)
+  - They are unstable an inefficient

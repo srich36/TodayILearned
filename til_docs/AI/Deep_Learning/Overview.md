@@ -27,6 +27,12 @@ over time
 - *Optimizer* - An algorithm that is used to update the weights of the neural network
   - Examples: gradient descent, stochastic gradient descent, etc. Different optimization algorithms often use gradient
   descent as a backbone but not always
+- *Residual Neural Network* - A neural network that uses skip connections to jump over layers
+- *Autoregressive* - Autoregressive models take in historical state data as input to predict future state
+  - This is different than models that just take in a set of defined feature inputs
+  - Many stock market models are autoregressive
+  - ChatGPT is autoregressive because the next token in a sequence generation depends on the previous tokens
+    - The output from one iteration is used as the input into the next
 
 ## Hyperparameters
 
@@ -183,6 +189,9 @@ over time
   - However, there are a few caveats
     - The number of neurons in the hidden layer may be very large
     - The resulting model may be very complex and may not generalize beyond that function
+- A pretty standard neural network architecture that has a vision component is
+  - Convolutional layer to extract features from image inputs
+  - Fully connected layer to classify the features and make a decision
 
 ## Limitations of Deep Learning Models
 
