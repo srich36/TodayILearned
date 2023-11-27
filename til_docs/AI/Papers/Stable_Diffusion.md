@@ -4,6 +4,7 @@
 - Training these often takes 100s of GPU days
 - Evaluating a model is also expensive in time and memory
 - The key to this paper was to reduce computational demands while maintaining performance of diffusion models
+- **It is critical to adjust the noise schedule to add more noise when training higher resolution image models**
 
 ## Training
 

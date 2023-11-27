@@ -27,6 +27,9 @@ The main way you can fracture relationships is by not being upfront with people.
 - If you are talking to someone and it looks like you lost them, pause and say something like "It looks like I lost you, do you have any questions?"
 - Faster is always better. Don't "circle back on something next week" -- do it now, or call them and speak to them later that day
   - whenever you are feeling stuck just **start doing the work**
+- Explicit is always >>> implicit
+  - For example, deduplication should use a semantic, dedicated `deduplication_id` rather than implicitly trying to derive a deduplication key 
+  from the entire payload (what happens if the expected payload changes?)
 
 ## Document Structuring
 

@@ -21,4 +21,3 @@
 
 - Add context to queries from a knowledge base so the model can answer
     - You still want to keep the question close to the part of the prompt asking for the answer as this closeness will make the model more likely to produce correct results 
-- 

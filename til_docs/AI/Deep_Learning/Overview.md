@@ -33,6 +33,14 @@ over time
   - Many stock market models are autoregressive
   - ChatGPT is autoregressive because the next token in a sequence generation depends on the previous tokens
     - The output from one iteration is used as the input into the next
+- *LoRA*  - Low-Rank Adaptation of Large Language Models
+  - A training method that accelerates the training of large models while consuming less memory
+  - This essentially freezes the pre-trained weights and injects trainable parameters into each layer of the architecture
+  - **This is critical**, since redeploying new weights for each 70B+ parameter model fine-tuned is not feasibleggk
+- *Emergent abilities* - Functions that the model develops that aren't explicitly in the model's training objective
+- *Policy Learning* - A reinforcement learning technique where the agent learns to optimize the decision making policy *directly* 
+without ever having to learn the `Q` function
+- *Direct Preference Optimization (DPO)* - A new approach for aligning models in finetuning with human preference as an alternative to RLHF
 
 ## Hyperparameters
 
@@ -192,6 +200,7 @@ over time
 - A pretty standard neural network architecture that has a vision component is
   - Convolutional layer to extract features from image inputs
   - Fully connected layer to classify the features and make a decision
+- The most standard benchmark for image classification is the *ImageNet* dataset
 
 ## Limitations of Deep Learning Models
 
@@ -213,3 +222,30 @@ over time
 - Small random noise to input data (e.g. images) greatly affect the output of the model
   - Humans are robust to this, but the models may classify the image as something completely different
   - This is an *adversarial attack* -- how can we modify input data to increase the loss?
+
+### Misc Notes (Old)
+
+- Alignment vs. capability is similar to accuracy vs. precision [link](https://www.assemblyai.com/blog/how-chatgpt-actually-works/)
+  - *Capability* - How well a model can maximize its objective function (e.g. a model designed to maximize stock market predictions)
+  - *Alignment* - How well can the model do what we **want** it to do vs. what it was trained to do
+  - For example, a model designed to predict bird types may maximize its objective function extremely well, but that objective function may
+    not actually be great at making predictions
+  - Models like the original GPT-3 are misaligned -- they can produce large amounts of text but not be consistent with human intent
+    - These models' objective function is a probability distribution around tokens (capability) but they are expected to perform cognitive reasoning (alignment)
+  - ChatGPT was trained with human feedback to help align the model better to its output (RLHF)
+    - ChatGPT was the first model to put RLHF into production
+  - Alignment also includes producing non-toxic and unbiased responses
+- Supervised fine tuning (SFT) is a technique to train a model that involves fine-tuning the model on a set of high-quality, pre-labeled output data by humans
+  - This is the standard fine tuning process
+  - The huggingface `transformers` library is the most popular way to fine-tune models
+- Distilled supervised fine tuning (dSFT) is a technique to train a model on a smaller dataset by using a larger model as a teacher
+  - The teacher model is used to generate labels for the smaller dataset
+  - The smaller dataset is then used to train the smaller model
+  - This is a form of transfer learning, **but the student model does not ever reach the performance of the parent model** and are not aligned
+  - In general, training on human feedback > dSFT
+- One *epoch* in model training is when all the training data is used once
+  - This gives each piece of training data an ability to update the model parameters
+- One limitation of this study is that GPT-4 was used as the evaluator for the benchmarks and
+  it's known to be biased towards models derived from itself
+- *Loss function* - A loss function is the mathematical function that is used to minimize the
+  error between the actual and predicted outcomes

@@ -50,3 +50,18 @@ Reverse Denoising Steps
   - This can generate models in 3D
 - Diffusion models can be used to generate proteins 
   - Can we design new proteins with new biological or therapeutic properties?
+
+## Latent Diffusion Models
+
+- Latent diffusion models operate on the *latent space representation* of an image rather than the raw pixels
+
+The process is as follows:
+1. Encode input into a latent space representation
+2. Sample from the latent space representation 
+3. Go through the diffusion process on this latent space representation to genearte a high-quality image
+
+**Since we are operating on the latent space rather than raw pixels, any input (e.g. text) can be encoded
+into the latent space for generation**
+- This is how models like stable diffusion can generate text-to-image 
+- Because the latent space is a Gaussian distribution because of the regularization loss term (see [Generative Modeling](./Generative_Modeling.md))
+these still allow for random sampling from the latent space to generate images not dependent on input

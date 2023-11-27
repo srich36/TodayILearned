@@ -157,3 +157,46 @@ what a road is, etc.**
   - Photo-realistic simulators (like [VISTA](https://vista.csail.mit.edu/) from MIT) are simulators that use real
   photos to eliminate the sim to real gap
     - This worked to train a sample self-driving car in the real world
+
+### RLHF
+
+- Writing a loss function to capture what is "better" in an LLM response is extremely difficult
+  - What if we could use human preferences to help with that loss function instead?
+- RLHF uses methods from reinforcement learning to use the human feedback to directly optimize a language model
+- Once we have an LLM, the next step in RLHF is to train a **reward model**
+  - This is how human preferences are integrated into the system
+- Reward model
+  - The goal is to train a model that takes in a sequence of text and returns a scalar reward which 
+  should numerically represent human preference
+  - There are multiple ways to implement this but a scalar output is required
+    - e.g. This could be another language model fine-tuned or trained from scratch on the preference data
+- Training the reward model (RM)
+  - Human annotators rank the text outputs from the LLM
+    - These rankings are relative to other outputs to remove noise, differences in ranking amongst annotators, etc.
+    - The head-to-head Elo system is most commonly used for this
+  - These rankings are normalized into a scalar reward signal for training
+  - Now that we have an initial LLM to generate text, and a reward model to rank it, we can use
+  reinforcement learning to optimize the original language model with respect to the reward model
+  - In this finetuning, a large number of parameters are frozen and a policy gradient algorithm *Proximal Policy Optimization (PPO)* is used
+- Formalized definitions for RL in LMs
+  - Policy - A language model that takes in a sequence of text and outputs another sequence of text
+  - Action space - All the tokens of the language model
+  - Observation space - The distribution of possible input sequences (quite large)
+  - Reward function - A combination of the preference model and a constraint on policy shift
+- Tying this all together
+  - Given a prompt `x`, `y` text is generated 
+  - Concatenate `x` and `y` to get the full text, and feed this to the reward model for evaluation
+  - Per-token probability distributions from the in progress finetuning model and the original model are compared to ensure
+  the RL isn't making the RLHF finetuned model stray too far from the original model
+    - This ensures the LM doesn't output gibberish that fools the reward model
+  - The *update rule* is the parameter update from PPO that maximizes the reward metrics on the given batch of dataG
+
+#### Downsides
+
+- Have to train two separate models
+- This is complex and unstable as you don't want the finetuned LM to drift far from the original LM
+
+### Miscellaneous Notes
+
+- RL is very useful because you can run thousands of simulations in parallel
+  - This allows you to get to a better solution faster

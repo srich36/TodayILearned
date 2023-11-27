@@ -91,6 +91,9 @@ From this [talk](https://www.youtube.com/watch?v=p1NpGC8K-vs&list=PLtBw6njQRU-rw
   - (CT) RNN - continuous time recurrent neural network
 - When using these models in practice, a simple LSTM network will outperform this
 - So, this research proposes a *Liquid Time-Constant (LTC) network*
+
+### Liquid Time-Constant (LTC) Networks
+- LTCs are a type of continuous time process neural network that operate on time-series data
   - This system is input-dependent; the behavior of the neural network changes based on the input
   - **You can control a network with very-few parameters in a LTC**
     - This is actually really interesting because it means the network is more understandable
@@ -99,3 +102,11 @@ From this [talk](https://www.youtube.com/watch?v=p1NpGC8K-vs&list=PLtBw6njQRU-rw
   - These networks can achieve robustness without overparameterization
 - The researcher's idea for why Liquid neural networks can bypass the law of robustness is `d_eff`
   - Liquid neural networks can extract much more out of a dataset, thus `d_eff` is much lower
+- LTCs also have different types of neurons
+  - This is similar to how the brain has different types of neurons
+  - This allows for more expressivity and for you to know what neurons are doing what
+- LTCs generalize better to other unseen scenarios than other networks
+- These networks are very compact and can run on edge devices
+- Downsides
+  - LTCs require time-series data to operate (e.g. videos) and can't extract the same information from static images
+  - They struggle to learn long-term dependencies (vanishing gradient problem, see [RNNs](./RNNs.md))

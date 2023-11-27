@@ -10,5 +10,4 @@
 
 ## JIT
 
-- The first time a set of instructions is encountered it is compiled into native machine code. This is then cached upon
-subsquent invocations
+- The first time a set of instructions is encountered it is compiled into native machine code. This is then cached uponsubsquent invocations
