@@ -41,6 +41,14 @@ over time
 - *Policy Learning* - A reinforcement learning technique where the agent learns to optimize the decision making policy *directly* 
 without ever having to learn the `Q` function
 - *Direct Preference Optimization (DPO)* - A new approach for aligning models in finetuning with human preference as an alternative to RLHF
+- *Residual Connections* - basically a skip connection, where output from one layer can skip layers in the network
+- *Layer Normalization* - This is a layer that normalizes all of the features with the same distribution
+  - e.g. for student loan models, age and value could be the features which are in very different scales
+  - **Gradient descent algorithms take much longer to converge in training when input features are not all on the same scale** (intuitive, because of learning rate)
+  - But the input features aren't the only input to each layer in a model
+    - A normalization layer ensures the outputs of each hidden layer are normalized to a standard mean and std deviation
+    - Generally this will normalize the inputs to a mean of 0 and a stddeviation of 1
+
 
 ## Hyperparameters
 
