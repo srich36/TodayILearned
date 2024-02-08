@@ -32,6 +32,7 @@ The main way you can fracture relationships is by not being upfront with people.
   from the entire payload (what happens if the expected payload changes?)
 - Always think about requirements from first principles. Is an approximation okay or do things *really* need to be exact 
   - e.g. Datadog metrics for 99th percentile and similar queries are approximates! This is good enough for customers and makes the engineering tractable
+- Active listening, and asking open-ended questions to people is the key to building rapport and learning about people
 
 ## Document Structuring
 
