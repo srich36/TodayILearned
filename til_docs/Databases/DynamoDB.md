@@ -204,7 +204,7 @@ your data to analytics systems.
 - You need to arrange your items with your primary keys so they are sorted in advance
     - Your sort key will drive sorting here
 - Casing matters in text sorting -- use lowercase if you need to maintain proper sorting
-- Using unique sortable ids can help as well (KSUID, UUIDv7)
+- Using unique sortable ids can help as well (KSUID, UUIDv7 )
 - **You cannot update a sort-key after it is created without deleting and recreating the item**
     - You can do this for a secondary index (what you'll want to use for an `updated_at` for example) because DynamoDB handles the deletion
     and recreation when replicating asynchronously

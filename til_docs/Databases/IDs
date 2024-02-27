@@ -1,0 +1,10 @@
+# Overview
+
+- Autoincrement leads to scaling issues down the line and can risk leaking information
+- UUIDv7 is a sortable uuid based on timestamp
+  - UUIDs don't work well in URLs though
+- [TypeID](https://github.com/jetpack-io/typeid/blob/main/README.md) gives you the best of both worlds (sortable IDs, Stripe like prefix IDs)
+    - This is just an extension of UUIDv7
+    - These can be decoded to get the original UUIDv7 back
+    - **Sean's thoughts: Use typeIDs everywhere**
+- [KSUID](https://github.com/segmentio/ksuid) is another standard similar to TypeID
