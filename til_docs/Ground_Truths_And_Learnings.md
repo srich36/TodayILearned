@@ -36,6 +36,10 @@ The main way you can fracture relationships is by not being upfront with people.
 - **When you’re selling things make sure you truly understand what your potential customer is trying to do or their pain points**
     - Nothing ruins a sale more than when a potential customer thinks you don’t understand what they are trying to accomplish
 - Momentum kills deals. If you want something keep the momentum high
+- Everyone goes through tough times. It really sucks to go through those tough times alone.
+  - Proactively reach out to people and check in with how they're doing -- they'll really appreciate it
+- Consistency compounded over time is the key to success
+  - There are time for sprints, but sustainable, consistent work will get you further over the long run
 
 ## Document Structuring
 
