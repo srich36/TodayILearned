@@ -39,7 +39,7 @@ const getHTMLTitle = (filePath) => {
     }
 
     const titleString = stack.reverse().join(' ')
-    return `Learn Code Daily - ${titleString}`
+    return `Let's Learn - ${titleString}`
 }
 
 htmlFiles.forEach( filePath => {
